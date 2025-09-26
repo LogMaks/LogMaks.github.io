@@ -1,5 +1,17 @@
 theme: jekyll-theme-minimal
-title: LogMaks's homepage
-description: Bookmark this to keep an eye on my project updates!
+
+title: "LogMaks's homepage"
+description: "Bookmark this to keep an eye on my project updates!"
 lang: en
 url: "https://logmaks.github.io"
+baseurl: ""         # для user/organization pages
+
+# Markdown и подсветка (из коробки на GitHub Pages)
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM        # GitHub-style markdown (таблицы, чекбоксы и т.п.)
+  math_engine: mathjax
+
+# Красивые URL для постов и страниц
+permalink: /:categories/:year/:month/:day/:title:output_ext
