@@ -1,1 +1,148 @@
-Hi!
+---
+layout: none
+title: "Home"
+permalink: /
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title | default: 'Personal Site' }}</title>
+  <meta name="description" content="{{ site.description | default: 'Personal site and blog' }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root{--md-primary:#1976d2;--md-primary-variant:#1565c0;--md-secondary:#03a9f4;--md-on-primary:#fff;--md-bg:#f5f7fa;--md-surface:#fff;--md-on-surface:#0f172a;--md-sub:#5f6b7a;--md-outline:#e0e0e0;--md-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)}
+    html,body{margin:0;padding:0;background:var(--md-bg);color:var(--md-on-surface);font:16px/1.65 Roboto,system-ui,-apple-system,"Segoe UI",Ubuntu,Cantarell,sans-serif}
+    a{color:var(--md-primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--md-shadow)}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
+    nav a{color:#e3f2fd;margin-right:14px}
+    nav a:hover{color:#fff}
+    .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .title{margin:6px 0 0;font-size:clamp(26px,4.5vw,38px);font-weight:700}
+    .muted{color:#bbdefb}
+    main{max-width:1100px;margin:22px auto;padding:0 16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .card{background:var(--md-surface);border:1px solid var(--md-outline);border-radius:14px;box-shadow:var(--md-shadow);padding:18px;margin:16px 0}
+    .md-btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:500;border:1px solid transparent;cursor:pointer;background:transparent;color:var(--md-on-primary)}
+    .md-contained{background:#fff;color:var(--md-primary)}
+    .md-outlined{border-color:#fff;color:#fff}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:1000px){.grid3{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:680px){.grid3{grid-template-columns:1fr}}
+    .post{border:1px solid var(--md-outline);border-radius:12px;padding:14px;background:#fff}
+    .post h3{margin:4px 0 6px;font-size:18px}
+    .post time{font-size:12px;color:#64748b}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--md-outline);background:#fff;font-size:13px;color:#374151}
+    footer{color:#667085;text-align:center;padding:28px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="row" style="justify-content:space-between">
+        <nav>
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/posts/' | relative_url }}">Posts</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+        <div class="row">
+          <a class="md-btn md-outlined" href="{{ '/about/?lang=en' | relative_url }}">EN</a>
+          <a class="md-btn" href="{{ '/about/?lang=ru' | relative_url }}">RU</a>
+        </div>
+      </div>
+      <h1 class="title">{{ site.title | default: 'Personal Site' }}</h1>
+      <p class="muted">{{ site.description | default: 'Personal site and blog' }}</p>
+      <div class="row" style="margin-top:10px">
+        <a class="md-btn md-contained" href="{{ '/posts/' | relative_url }}"><span class="material-icons">article</span> View Posts</a>
+        <a class="md-btn md-outlined" style="border-color:#e3f2fd" href="{{ '/about/' | relative_url }}"><span class="material-icons">person</span> About</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: quick intro + highlights -->
+    <section class="hero">
+      <div class="card">
+        <h2 style="margin-top:0">Highlights</h2>
+        <ul>
+          <li>Research focus: Reinforcement Learning (RL), MARL, agent systems.</li>
+          <li>Industrial decision support (maintenance planning, safety).</li>
+          <li>Open prototypes with clean APIs, tests, and docs.</li>
+        </ul>
+        <div class="row" style="margin-top:8px">
+          <span class="chip"><span class="material-icons">psychology</span> RL / MARL</span>
+          <span class="chip"><span class="material-icons">code</span> Python · C++ · SQL</span>
+          <span class="chip"><span class="material-icons">hub</span> Agents</span>
+          <span class="chip"><span class="material-icons">dataset</span> MLOps</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Quick Links</h2>
+        <p>
+          <a href="{{ '/about/' | relative_url }}" class="material-link"><span class="material-icons" style="vertical-align:middle">person</span> About</a><br>
+          <a href="{{ '/posts/' | relative_url }}" class="material-link"><span class="material-icons" style="vertical-align:middle">article</span> Posts</a><br>
+          <a href="https://github.com/{{ site.github_username | default: 'logmaks' }}" target="_blank" rel="noopener" class="material-link"><span class="material-icons" style="vertical-align:middle">code</span> GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Recent posts (Jekyll) -->
+    <section class="card">
+      <h2 style="margin:0 0 12px">Recent posts</h2>
+      <div class="grid3">
+        {% assign recent = site.posts | slice: 0, 6 %}
+        {% if recent and recent.size > 0 %}
+          {% for p in recent %}
+            <article class="post">
+              <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+              <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%Y-%m-%d" }}</time>
+              {% if p.excerpt %}<p>{{ p.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+              {% if p.categories %}
+                <div class="row" style="margin-top:6px">
+                  {% for c in p.categories %}<span class="chip">{{ c }}</span>{% endfor %}
+                </div>
+              {% endif %}
+            </article>
+          {% endfor %}
+        {% else %}
+          <p>No posts yet. Create files in <code>_posts/</code> like <code>YYYY-MM-DD-title.md</code>.</p>
+        {% endif %}
+      </div>
+      <div class="row" style="justify-content:flex-end;margin-top:8px">
+        <a class="material-link" href="{{ '/posts/' | relative_url }}"><span class="material-icons" style="vertical-align:middle">arrow_forward</span> All posts</a>
+      </div>
+    </section>
+
+    <!-- Research / Projects cards -->
+    <section class="card">
+      <h2 style="margin:0 0 12px">Research & Projects</h2>
+      <div class="grid3">
+        <div class="post">
+          <h3><a href="{{ '/posts/research/rl/redo/' | relative_url }}">ReDo‑style RL note</a></h3>
+          <p>Template page for research write‑ups with math & figures.</p>
+        </div>
+        <div class="post">
+          <h3><a href="{{ '/about/' | relative_url }}">About page (EN/RU)</a></h3>
+          <p>Material Blue bilingual About with timeline and links.</p>
+        </div>
+        <div class="post">
+          <h3><a href="{{ '/posts/' | relative_url }}">Blog</a></h3>
+          <p>Short posts, notes, datasets, and code snippets.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> • {{ site.title | default: 'Personal Site' }}</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
