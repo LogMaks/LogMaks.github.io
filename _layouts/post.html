@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.title }} — {{ site.title }}</title>
+<meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+:root{--md-primary:#1976d2;--md-primary-variant:#1565c0;--md-on-primary:#fff;--md-bg:#f5f7fa;--md-surface:#fff;--md-on-surface:#0f172a;--md-sub:#5f6b7a;--md-outline:#e0e0e0;--md-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)}
+html,body{margin:0;padding:0;background:var(--md-bg);color:var(--md-on-surface);font:16px/1.75 Roboto,system-ui,-apple-system,"Segoe UI",Ubuntu,Cantarell,sans-serif}
+a{color:var(--md-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--md-shadow)}
+.wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
+nav a{color:#e3f2fd;margin-right:14px}
+nav a:hover{color:#fff}
+.title{margin:6px 0 0;font-size:clamp(26px,4.5vw,40px);font-weight:700;color:#fff}
+.meta{color:#bbdefb}
+main{max-width:900px;margin:22px auto;padding:0 16px}
+.card{background:var(--md-surface);border:1px solid var(--md-outline);border-radius:14px;box-shadow:var(--md-shadow);padding:22px;margin:16px 0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--md-outline);background:#fff;font-size:13px;color:#374151}
+article p{margin:14px 0}
+article h2{margin-top:28px}
+article h3{margin-top:22px}
+blockquote{margin:12px 0;padding:12px 16px;border-left:4px solid #90caf9;background:#f8fbff;color:#0f172a;border-radius:8px}
+pre{background:#0b1220;color:#e5e7eb;padding:14px;border-radius:12px;overflow:auto;border:1px solid #111827}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+figure{margin:18px 0;text-align:center}
+figcaption{color:#64748b;font-size:14px;margin-top:6px}
+.prevnext{display:flex;justify-content:space-between;gap:12px;margin-top:16px}
+.muted{color:#667085}
+</style>
+<!-- MathJax for formulas in posts -->
+<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header>
+<div class="wrap">
+<nav>
+<a href="{{ '/' | relative_url }}">Home</a>
+<a href="{{ '/posts/' | relative_url }}">Posts</a>
+<a href="{{ '/about/' | relative_url }}">About</a>
+</nav>
+<h1 class="title">{{ page.title }}</h1>
+<div class="meta">
+<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+{% if page.categories %}
+· {% for c in page.categories %}<span class="chip">{{ c }}</span>{% endfor %}
+{% endif %}
+</div>
+</div>
+</header>
+
+
+<main>
+<article class="card">
+{{ content }}
+<div class="prevnext">
+<div>
+{% if page.previous %}
+← <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+{% endif %}
+</div>
+<div>
+{% if page.next %}
+<a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a> →
+{% endif %}
+</div>
+</div>
+<p class="muted">Tags: {% if page.tags %}{% for t in page.tags %}<span class="chip">{{ t }}</span>{% endfor %}{% else %}—{% endif %}</p>
+</article>
+</main>
+</body>
+</html>
