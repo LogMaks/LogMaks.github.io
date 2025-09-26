@@ -1,0 +1,177 @@
+---
+layout: none
+title: "About"
+permalink: /about/
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — Material Blue</title>
+  <meta name="description" content="About me page in English and Russian. Default language is English." />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root{
+      --md-primary:#1976d2; --md-primary-variant:#1565c0; --md-secondary:#03a9f4;
+      --md-on-primary:#ffffff; --md-bg:#f5f7fa; --md-surface:#ffffff; --md-on-surface:#0f172a;
+      --md-sub:#5f6b7a; --md-outline:#e0e0e0; --md-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)
+    }
+    html,body{margin:0;padding:0;background:var(--md-bg);color:var(--md-on-surface);font:16px/1.65 Roboto,system-ui,-apple-system,"Segoe UI",Ubuntu,Cantarell,sans-serif}
+    a{color:var(--md-primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--md-shadow)}
+    .wrap{max-width:960px;margin:0 auto;padding:18px 16px}
+    nav a{color:#e3f2fd;margin-right:14px}
+    nav a:hover{color:#fff}
+    .title{margin:6px 0 0;font-size:clamp(26px,4.5vw,38px);font-weight:700}
+    main{max-width:900px;margin:22px auto;padding:0 16px}
+    .card{background:var(--md-surface);border:1px solid var(--md-outline);border-radius:14px;box-shadow:var(--md-shadow);padding:18px;margin:16px 0}
+    .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .md-btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:500;border:1px solid transparent;cursor:pointer;background:transparent;color:var(--md-primary)}
+    .md-contained{background:var(--md-primary);color:#fff}
+    .md-contained:hover{background:var(--md-primary-variant)}
+    .md-outlined{border-color:var(--md-primary)}
+    .muted{color:var(--md-sub)}
+    .grid{display:grid;grid-template-columns:240px 1fr;gap:16px}
+    @media (max-width:800px){.grid{grid-template-columns:1fr}}
+    .avatar{width:100%;max-width:220px;border-radius:12px;border:1px solid var(--md-outline);box-shadow:var(--md-shadow)}
+    ul{margin:8px 0 0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--md-outline);background:#fff;font-size:13px}
+    footer{color:#667085;text-align:center;padding:28px 0}
+    .lang-switch{margin-left:auto}
+    .flag{font-size:18px}
+    .divider{height:1px;background:var(--md-outline);margin:10px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/posts/' | relative_url }}">Posts</a>
+        <a href="{{ '/about/' | relative_url }}" aria-current="page">About</a>
+      </nav>
+      <div class="lang-switch row">
+        <button class="md-btn md-outlined" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        <button class="md-btn" data-lang="ru" title="Русский"><span class="flag">🇷🇺</span> RU</button>
+      </div>
+      <h1 class="title">About Me</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="grid">
+        <div>
+          <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Profile photo" class="avatar" onerror="this.style.display='none'" />
+        </div>
+        <div>
+          <!-- EN (default) -->
+          <div data-i18n="en">
+            <p class="muted">Short intro</p>
+            <p>Hello! I'm <strong>Your Name</strong> — a researcher and engineer focused on Reinforcement Learning (RL), multi-agent systems, and practical AI. I design learning systems, evaluate them rigorously, and bring prototypes to production.</p>
+            <div class="chips" aria-label="skills">
+              <span class="chip"><span class="material-icons">psychology</span> RL / MARL</span>
+              <span class="chip"><span class="material-icons">code</span> Python · C++ · SQL</span>
+              <span class="chip"><span class="material-icons">dataset</span> MLOps · Data</span>
+              <span class="chip"><span class="material-icons">hub</span> Agents</span>
+            </div>
+            <div class="divider"></div>
+            <p><strong>What I’m working on</strong></p>
+            <ul>
+              <li>Hierarchical and safe RL for decision support in industrial maintenance.</li>
+              <li>Agent-based simulations with uncertainty (Dempster–Shafer, Bayesian).</li>
+              <li>Open, well-documented prototypes with clean APIs and tests.</li>
+            </ul>
+            <p class="row">
+              <a class="md-btn md-contained" href="{{ '/assets/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> CV (EN)</a>
+              <a class="md-btn" href="mailto:you@example.com"><span class="material-icons">mail</span> you@example.com</a>
+              <a class="md-btn" href="https://github.com/your" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
+              <a class="md-btn" href="https://www.linkedin.com/in/your" target="_blank" rel="noopener"><span class="material-icons">business_center</span> LinkedIn</a>
+            </p>
+          </div>
+
+          <!-- RU -->
+          <div data-i18n="ru" hidden>
+            <p class="muted">Коротко обо мне</p>
+            <p>Привет! Я — <strong>Ваше Имя</strong>, исследователь и инженер, занимаюсь обучением с подкреплением (RL), мультиагентными системами и практическим ИИ. Проектирую обучающиеся системы, строго их оцениваю и довожу прототипы до продакшена.</p>
+            <div class="chips" aria-label="Навыки">
+              <span class="chip"><span class="material-icons">psychology</span> RL / MARL</span>
+              <span class="chip"><span class="material-icons">code</span> Python · C++ · SQL</span>
+              <span class="chip"><span class="material-icons">dataset</span> MLOps · Data</span>
+              <span class="chip"><span class="material-icons">hub</span> Агенты</span>
+            </div>
+            <div class="divider"></div>
+            <p><strong>Чем я занимаюсь</strong></p>
+            <ul>
+              <li>Иерархическое и безопасное RL для поддержки решений в промышленном ТОиР.</li>
+              <li>Мультиагентные симуляции с неопределённостью (Демпстер—Шефер, Байес).</li>
+              <li>Открытые прототипы с чистыми API и тестами.</li>
+            </ul>
+            <p class="row">
+              <a class="md-btn md-contained" href="{{ '/assets/cv_ru.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> Резюме (RU)</a>
+              <a class="md-btn" href="mailto:you@example.com"><span class="material-icons">mail</span> you@example.com</a>
+              <a class="md-btn" href="https://github.com/your" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
+              <a class="md-btn" href="https://www.linkedin.com/in/your" target="_blank" rel="noopener"><span class="material-icons">business_center</span> LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="row" style="margin:0 0 8px"><span class="material-icons">timeline</span> Timeline / Таймлайн</h2>
+      <div data-i18n="en">
+        <ul>
+          <li><strong>2025—now:</strong> PhD-track research in RL & multi-agent systems.</li>
+          <li><strong>2023—2025:</strong> Master’s — ML, optimization, industrial AI projects.</li>
+          <li><strong>Earlier:</strong> Software engineering: Python/C++, data, systems.</li>
+        </ul>
+      </div>
+      <div data-i18n="ru" hidden>
+        <ul>
+          <li><strong>2025—н.в.:</strong> Исследования PhD-уровня в области RL и мультиагентных систем.</li>
+          <li><strong>2023—2025:</strong> Магистратура — МО, оптимизация, промышленные AI-проекты.</li>
+          <li><strong>Ранее:</strong> Software engineering: Python/C++, данные, системы.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> • Your Name</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const blocks = document.querySelectorAll('[data-i18n]');
+    const btns = document.querySelectorAll('[data-lang]');
+
+    function setLang(lang){
+      blocks.forEach(b => { b.hidden = b.getAttribute('data-i18n') !== lang; });
+      btns.forEach(b => {
+        const is = b.getAttribute('data-lang') === lang;
+        b.classList.toggle('md-outlined', is);
+        b.classList.toggle('md-contained', is);
+      });
+      localStorage.setItem('about_lang', lang);
+      document.documentElement.lang = lang === 'ru' ? 'ru' : 'en';
+      document.querySelector('.title').textContent = lang === 'ru' ? 'Обо мне' : 'About Me';
+    }
+
+    function initLang(){
+      const url = new URL(location.href);
+      const q = url.searchParams.get('lang');
+      const saved = localStorage.getItem('about_lang');
+      const lang = (q || saved || 'en').toLowerCase();
+      setLang(lang === 'ru' ? 'ru' : 'en');
+    }
+
+    btns.forEach(b => b.addEventListener('click', () => setLang(b.getAttribute('data-lang'))));
+    initLang();
+  </script>
+</body>
+</html>
