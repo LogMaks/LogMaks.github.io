@@ -1,7 +1,7 @@
 ---
 title: "Participation in CayleyPy(Project)"
 image: "/assets/cayley.png"
-excerpt: "AI-based library to work with extremely large graphs.
+excerpt: "AI-based library to work with extremely large graphs."
 Supporting: "Cayley graphs, Schreier coset graphs, more to be added."
 ---
 * Wiki Link [Cayley graph](https://en.wikipedia.org/wiki/Cayley_graph).
