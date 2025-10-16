@@ -1,0 +1,17 @@
+- title: Safe RL for Maintenance
+  description: Research prototype for hierarchical and safe reinforcement learning in industrial maintenance planning.
+  tags: [RL, Safety, Industrial]
+  repo: https://github.com/LogMaks/safe-rl-maintenance
+  demo: 
+
+- title: Multi-Agent Simulation with Uncertainty
+  description: Agent-based simulation framework with Dempster–Shafer and Bayesian uncertainty.
+  tags: [Agents, Simulation]
+  repo: https://github.com/LogMaks/marl-uncertainty-sim
+  demo: 
+
+- title: RL Ops Toolkit
+  description: Utilities for experiment tracking, reproducibility, and evaluation in RL projects.
+  tags: [RL, MLOps]
+  repo: https://github.com/LogMaks/rl-ops-toolkit
+  demo:

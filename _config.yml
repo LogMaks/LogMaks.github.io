@@ -2,6 +2,7 @@ theme: jekyll-theme-minimal
 
 title: "LogMaks's homepage"
 description: "Bookmark this to keep an eye on my project updates!"
+github_username: logmaks
 lang: en
 url: "https://logmaks.github.io"
 baseurl: ""         # для user/organization pages
@@ -15,3 +16,8 @@ kramdown:
 
 # Красивые URL для постов и страниц
 permalink: /:categories/:year/:month/:day/:title:output_ext
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed

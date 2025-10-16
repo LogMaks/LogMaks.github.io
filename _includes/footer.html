@@ -1,0 +1,4 @@
+<footer>
+  © <span id="year"></span> • {{ site.title | default: 'Personal Site' }}
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>

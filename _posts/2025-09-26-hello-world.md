@@ -2,8 +2,8 @@
 layout: post
 title: "Welcome to My Page!"
 date: 2025-10-01 12:00:00 +0400
-categories: [post, 42]
-tags: [hello_world, just_post]
+categories: [personal_post]
+tags: [personal_post]
 excerpt: "Just post about me."
 ---
 
