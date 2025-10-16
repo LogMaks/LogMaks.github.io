@@ -1,25 +1,18 @@
 ---
 layout: post
-title: "ReDo in RL: notes"
-date: 2025-09-26 12:00:00 +0400
-categories: [research, rl]
-tags: [iqm, replay]
-excerpt: "Quick notes and figures about dormant neurons and reinitialization."
+title: "Welcome to My Page!"
+date: 2025-10-01 12:00:00 +0400
+categories: [post, 42]
+tags: [hello_world, just_post]
+excerpt: "Just post about me."
 ---
 
+Hello! I’m Maksim Loginov, a researcher and developer passionate about Reinforcement Learning (RL), Multi-Agent Systems, and intelligent automation.
+My work focuses on applying advanced machine learning methods to optimize complex industrial processes — particularly in maintenance planning, diagnostics, and reliability management.
 
-Вступление… Формулы рендерятся как `$E=mc^2$` или блочно:
+I combine my background in Python, C++, and data analysis with a strong interest in AI research and system design. Currently, I’m exploring how hierarchical and safe reinforcement learning can enhance decision-making in real-world industrial environments.
 
+On this page, I’ll share my ongoing projects, research notes, and experiments — from simulation-based studies to practical implementations.
+If you’re interested in AI, RL, or industrial automation, you’re in the right place.
 
-$$
-\mathcal{L}(\pi,\lambda)=\mathbb{E}_\pi\Big[\sum_t \gamma^t (r_t-\sum_j \lambda_j(g_{j,t}-c_j))\Big].
-$$
-
-
-Код:
-
-
-```python
-import numpy as np
-print("hello RL")
-```
+Welcome aboard — and stay tuned for updates!
