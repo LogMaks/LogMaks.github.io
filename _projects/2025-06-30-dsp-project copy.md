@@ -3,8 +3,8 @@ title: "Dempster–Shafer Theory for Condition Diagnosis"
 image: "/assets/dsp1.png"
 excerpt: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of a Continuous Casting Machines."
 ---
-*_URL pdf (RUS): https://vestnikvivt.ru/ru/journal/pdf?id=1410_
-*_URL to test model: https://damshaf.onrender.com/_
+-_URL pdf (RUS): https://vestnikvivt.ru/ru/journal/pdf?id=1410_
+-_URL to test model: https://damshaf.onrender.com/_
 
 
 The paper aims to apply the Dempster–Shafer Theory (DST) to improve diagnostics of industrial equipment, focusing on continuous casting machines (CCM) in metallurgy.
