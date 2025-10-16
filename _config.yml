@@ -1,5 +1,5 @@
 title: "LogMaks Journal"
-description: "Научный блог, заметки и проекты"
+description: "Scientific blog, notes and projects"
 url: "https://logmaks.github.io"
 baseurl: ""
 
@@ -11,7 +11,8 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 permalink: /posts/:title/
-timezone: Europe/Moscow
+timezone: UTC
+lang: en
 
 author:
   name: "LogMaks"
@@ -21,11 +22,20 @@ author:
 collections:
   posts:
     output: true
+  projects:
+    output: true
 
 defaults:
   - scope:
       path: ""
       type: "posts"
+    values:
+      layout: post
+      author: "LogMaks"
+      image: ""
+  - scope:
+      path: ""
+      type: "projects"
     values:
       layout: post
       author: "LogMaks"

@@ -5,12 +5,23 @@ permalink: /projects/
 ---
 
 <h1>Projects</h1>
-<ul>
-  {% for project in site.data.projects %}
-    <li>
-      <strong>{{ project.name }}</strong> — {{ project.description }}
-      {% if project.url %}(<a href="{{ project.url }}" target="_blank" rel="noopener">link</a>){% endif %}
-    </li>
+<div class="posts-grid">
+  {% assign projects_list = site.projects | sort: 'date' | reverse %}
+  {% for project in projects_list %}
+    <article class="post-card">
+      <a href="{{ project.url | relative_url }}">
+        {% if project.image %}
+          <img class="post-cover" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+        {% else %}
+          <div class="post-cover"></div>
+        {% endif %}
+      </a>
+      <div class="post-content">
+        <h2 class="post-title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+        {% if project.date %}<p class="post-meta">{{ project.date | date: "%d %B %Y" }}</p>{% endif %}
+        <p class="post-excerpt">{{ project.excerpt | strip_html | truncate: 140 }}</p>
+      </div>
+    </article>
   {% endfor %}
-</ul>
+</div>
 

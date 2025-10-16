@@ -1,20 +1,20 @@
 ---
 title: "Hello, Journal"
 image: "/assets/avatar.jpg"
-excerpt: "Первый пост в новом блоге."
+excerpt: "First post in the new blog."
 ---
 
-Добро пожаловать! Это стартовая запись. Здесь будут:
+Welcome! This is the first entry. You will find here:
 
-- краткие конспекты научных статей;
-- отчёты по экспериментам и код;
-- ссылки на проекты и презентации.
+- short paper notes;
+- experiment reports with code;
+- links to projects and talks.
 
 ```math
 E = mc^2
 ```
 
-И немного кода:
+And a bit of code:
 
 ```python
 def softmax(x):

@@ -1,18 +1,20 @@
 /* Minimal, image-ориентированная тема */
 :root {
-  --bg: #0b0c10;
-  --text: #e6edf3;
-  --muted: #9aa4b2;
-  --accent: #58a6ff;
-  --card: #111217;
+  --bg: #0b0b12; /* deep purple-tinted */
+  --text: #ffffff; /* white */
+  --muted: #c9c3e6; /* pale violet */
+  --accent: #8b5cf6; /* violet-500 */
+  --accent-strong: #7c3aed; /* violet-600 */
+  --card: #171428; /* dark indigo */
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; min-height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
 
 .container { width: 100%; max-width: 980px; margin: 0 auto; padding: 0 20px; }
 
-.site-header { position: sticky; top: 0; background: rgba(11,12,16,.8); backdrop-filter: blur(6px); border-bottom: 1px solid #1f232b; }
+.site-header { position: sticky; top: 0; background: rgba(23,20,40,.8); backdrop-filter: blur(6px); border-bottom: 1px solid #2a2645; }
 .site-header .brand { color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .nav a { color: var(--muted); text-decoration: none; margin-left: 16px; }
@@ -22,8 +24,8 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 
 /* Посты сеткой с крупными обложками */
 .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.post-card { background: var(--card); border: 1px solid #1f232b; border-radius: 12px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
-.post-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+.post-card { background: var(--card); border: 1px solid #2a2645; border-radius: 12px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.post-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(139,92,246,.25); border-color: var(--accent-strong); }
 .post-cover { display: block; width: 100%; height: 180px; object-fit: cover; background: #151821; }
 .post-content { padding: 14px 14px 16px; }
 .post-title { margin: 0 0 6px; font-size: 18px; color: var(--text); }
@@ -33,7 +35,9 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 /* Страницы */
 h1, h2, h3 { color: var(--text); }
 a { color: var(--accent); }
+a:hover { color: var(--accent-strong); }
 img { max-width: 100%; border-radius: 8px; }
 
-.site-footer { border-top: 1px solid #1f232b; padding: 24px 0; color: var(--muted); }
+.site-main { flex: 1; }
+.site-footer { margin-top: auto; border-top: 1px solid #2a2645; padding: 24px 0; color: var(--muted); }
 
