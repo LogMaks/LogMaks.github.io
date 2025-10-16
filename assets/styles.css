@@ -61,3 +61,11 @@ img { max-width: 100%; border-radius: 8px; }
 .social-list a { display: block; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); background: #faf9ff; }
 .social-list a:hover { border-color: var(--accent); color: var(--accent-strong); }
 
+/* Branded buttons */
+.btn-telegram { background: #229ED9; color: #fff; border-color: #229ED9; }
+.btn-telegram:hover { background: #1f8ec3; border-color: #1f8ec3; }
+.btn-scholar { background: #4285F4; color: #fff; border-color: #4285F4; }
+.btn-scholar:hover { background: #3367d6; border-color: #3367d6; }
+.btn-orcid { background: #A6CE39; color: #fff; border-color: #A6CE39; }
+.btn-orcid:hover { background: #8fb32f; border-color: #8fb32f; }
+
