@@ -5,6 +5,7 @@ date: 2025-10-01 12:00:00 +0400
 categories: [personal_post]
 tags: [personal_post]
 excerpt: "Just post about me."
+image: /assets/avatar.jpg
 ---
 
 Hello! I’m Maksim Loginov, a researcher and developer passionate about Reinforcement Learning (RL), Multi-Agent Systems, and intelligent automation.

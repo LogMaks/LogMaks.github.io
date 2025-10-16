@@ -9,16 +9,23 @@ permalink: /posts/
     {% if site.posts and site.posts.size > 0 %}
       {% for p in site.posts %}
         <article class="post">
-          <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-          <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%Y-%m-%d" }}</time>
-          {% if p.excerpt %}
-          <p>{{ p.excerpt | strip_html | truncate: 140 }}</p>
+          {% if p.image %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" class="post-image">
+          {% else %}
+          <div class="post-image"></div>
           {% endif %}
-          {% if p.categories %}
-          <div class="row">
-            {% for c in p.categories %}<span class="chip">{{ c }}</span>{% endfor %}
+          <div class="post-content">
+            <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%B %d, %Y" }}</time>
+            <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+            {% if p.excerpt %}
+            <p>{{ p.excerpt | strip_html | truncate: 140 }}</p>
+            {% endif %}
+            {% if p.categories %}
+            <div class="row">
+              {% for c in p.categories %}<span class="chip">{{ c }}</span>{% endfor %}
+            </div>
+            {% endif %}
           </div>
-          {% endif %}
         </article>
       {% endfor %}
     {% else %}

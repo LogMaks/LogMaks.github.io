@@ -18,15 +18,24 @@
 <body>
   {% include header.html %}
   <main class="container">
-    <article class="card">
-      <h1 class="title">{{ page.title }}</h1>
-      <div class="row muted">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-        {% if page.categories %}
-        · {% for c in page.categories %}<span class="chip">{{ c }}</span>{% endfor %}
-        {% endif %}
+    <article class="card post-single">
+      {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-hero-image">
+      {% endif %}
+      <div class="post-header">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+          {% if page.categories %}
+          <div class="post-categories">
+            {% for c in page.categories %}<span class="chip">{{ c }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
-      {{ content }}
+      <div class="post-body">
+        {{ content }}
+      </div>
       <div class="row" style="justify-content:space-between;margin-top:16px">
         <div>
           {% if page.previous %}
