@@ -1,4 +1,18 @@
 <footer>
-  © <span id="year"></span> • {{ site.title | default: 'Personal Site' }}
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
+    <div>
+      <strong>{{ site.title | default: 'Personal Site' }}</strong>
+      <p class="muted" style="margin:6px 0 0">Исследования, дизайн‑системы, прототипы.</p>
+    </div>
+    <div class="row" style="justify-content:flex-end;gap:10px">
+      <a class="md-btn" href="{{ '/posts/' | relative_url }}">Блог</a>
+      <a class="md-btn" href="{{ '/about/' | relative_url }}">Обо мне</a>
+      <a class="md-btn" href="{{ '/cv/' | relative_url }}">CV</a>
+    </div>
+  </div>
+  <div class="wrap" style="justify-content:space-between;display:flex;margin-top:8px">
+    <span class="muted">© <span id="year"></span></span>
+    <span class="muted">Сделано с Jekyll</span>
+  </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

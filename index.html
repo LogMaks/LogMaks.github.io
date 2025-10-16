@@ -7,20 +7,20 @@ permalink: /
 <section class="hero container">
   <div class="grid-2">
     <div class="card">
-      <h1 class="title">{{ site.title | default: 'Personal Site' }}</h1>
-      <p class="subtitle">{{ site.description | default: 'Personal site and blog' }}</p>
+      <h1 class="title">Дизайнерам — дом.</h1>
+      <p class="subtitle">Инструменты и прототипы, созданные инженером-исследователем. Фокус на качестве и реальной пользе.</p>
       <div class="actions row">
-        <a class="md-btn md-contained" href="{{ '/posts/' | relative_url }}"><span class="material-icons">article</span> View Posts</a>
-        <a class="md-btn md-outlined" href="{{ '/about/' | relative_url }}"><span class="material-icons">person</span> About</a>
+        <a class="md-btn md-contained" href="{{ '/posts/' | relative_url }}"><span class="material-icons">article</span> Читать блог</a>
+        <a class="md-btn md-outlined" href="{{ '/about/' | relative_url }}"><span class="material-icons">person</span> Обо мне</a>
         <a class="md-btn" href="https://github.com/{{ site.github_username | default: 'logmaks' }}" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
       </div>
     </div>
     <div class="card">
-      <h2 style="margin-top:0">Current Projects</h2>
+      <h2 style="margin-top:0">Сейчас в работе</h2>
       <ul class="no-bullets">
-        <li>Hierarchical & safe RL for industrial decision support</li>
-        <li>Agent-based simulations with uncertainty</li>
-        <li>Open prototypes with clean APIs and tests</li>
+        <li>Иерархический безопасный RL для решений в промышленности</li>
+        <li>Мультиагентные симуляции с неопределённостью</li>
+        <li>Открытые прототипы с чистыми API и тестами</li>
       </ul>
     </div>
   </div>
@@ -45,6 +45,24 @@ permalink: /
         </div>
       </article>
     {% endfor %}
+  </div>
+</section>
+
+<section class="container card">
+  <h2 style="margin:0 0 12px">Почему со мной удобно</h2>
+  <div class="benefits">
+    <div class="benefit">
+      <h3>Дизайн без отвлечений</h3>
+      <p>Минимализм, скорость, фокус на задаче. Только то, что приближает к результату.</p>
+    </div>
+    <div class="benefit">
+      <h3>Прототипы за минуты</h3>
+      <p>Живые сценарии, анимации и интеракции. Проверка гипотез раньше разработки.</p>
+    </div>
+    <div class="benefit">
+      <h3>Сотрудничество</h3>
+      <p>Прозрачная обратная связь, понятные артефакты и передача в разработку.</p>
+    </div>
   </div>
 </section>
 
