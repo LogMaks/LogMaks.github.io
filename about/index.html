@@ -1,114 +1,47 @@
 ---
-layout: none
+layout: default
 title: "About"
 permalink: /about/
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me — {{ site.title }}</title>
-  <meta name="description" content="About me page in English." />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    :root{
-      --md-primary:#1976d2; --md-primary-variant:#1565c0; --md-secondary:#03a9f4;
-      --md-on-primary:#ffffff; --md-bg:#f5f7fa; --md-surface:#ffffff; --md-on-surface:#0f172a;
-      --md-sub:#5f6b7a; --md-outline:#e0e0e0; --md-shadow:0 1px 2px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06)
-    }
-    html,body{margin:0;padding:0;background:var(--md-bg);color:var(--md-on-surface);font:16px/1.65 Roboto,system-ui,-apple-system,"Segoe UI",Ubuntu,Cantarell,sans-serif}
-    a{color:var(--md-primary);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--md-shadow)}
-    .wrap{max-width:960px;margin:0 auto;padding:18px 16px}
-    nav a{color:#e3f2fd;margin-right:14px}
-    nav a:hover{color:#fff}
-    .title{margin:6px 0 0;font-size:clamp(26px,4.5vw,38px);font-weight:700}
-    main{max-width:900px;margin:22px auto;padding:0 16px}
-    .card{background:var(--md-surface);border:1px solid var(--md-outline);border-radius:14px;box-shadow:var(--md-shadow);padding:18px;margin:16px 0}
-    .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-    .md-btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:500;border:1px solid transparent;cursor:pointer;background:transparent;color:var(--md-primary)}
-    .md-contained{background:var(--md-primary);color:#fff}
-    .md-contained:hover{background:var(--md-primary-variant)}
-    .md-outlined{border-color:var(--md-primary)}
-    .muted{color:var(--md-sub)}
-    .grid{display:grid;grid-template-columns:240px 1fr;gap:16px}
-    @media (max-width:800px){.grid{grid-template-columns:1fr}}
-    .avatar{width:100%;max-width:220px;border-radius:12px;border:1px solid var(--md-outline);box-shadow:var(--md-shadow)}
-    ul{margin:8px 0 0}
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;border:1px solid var(--md-outline);background:#fff;font-size:13px}
-    footer{color:#667085;text-align:center;padding:28px 0}
-    .lang-switch{margin-left:auto}
-    .flag{font-size:18px}
-    .divider{height:1px;background:var(--md-outline);margin:10px 0}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap row">
-      <nav>
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/posts/' | relative_url }}">Posts</a>
-        <a href="{{ '/about/' | relative_url }}" aria-current="page">About</a>
-      </nav>
-      <h1 class="title">About Me</h1>
+<section class="card">
+  <div class="grid-2">
+    <div>
+      <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Profile photo" style="width:100%;max-width:220px;border-radius:12px;border:1px solid var(--md-outline);box-shadow:var(--md-shadow)" onerror="this.style.display='none'" />
     </div>
-  </header>
-
-  <main>
-    <section class="card">
-      <div class="grid">
-        <div>
-          <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Profile photo" class="avatar" onerror="this.style.display='none'" />
-        </div>
-        <div>
-          <div>
-            <p class="muted">Yet another agent in multi-agent systems... </p>
-            <p>Hello! I'm <strong>Maksim Loginov</strong> — a researcher and engineer focused on Reinforcement Learning (RL), multi-agent systems, and practical AI. I design learning systems, evaluate them rigorously, and bring prototypes to production. English / German / Russian.</p>
-            <div class="chips" aria-label="skills">
-              <span class="chip"><span class="material-icons">psychology</span> RL / MARL</span>
-              <span class="chip"><span class="material-icons">code</span> Python · C++ · SQL</span>
-              <span class="chip"><span class="material-icons">dataset</span> MLOps · Data</span>
-              <span class="chip"><span class="material-icons">hub</span> Agents</span>
-            </div>
-            <div class="divider"></div>
-            <p><strong>What I’m working on</strong></p>
-            <ul>
-              <li>Hierarchical and safe RL for decision support in industrial maintenance.</li>
-              <li>Agent-based simulations with uncertainty (Dempster–Shafer, Bayesian).</li>
-              <li>Open, well-documented prototypes with clean APIs and tests.</li>
-            </ul>
-            <p class="row">
-              <a class="md-btn md-contained" href="{{ '/assets/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> CV</a>
-              <a class="md-btn" href="mailto:lomaxart@gmail.com"><span class="material-icons">mail</span> E-mail </a>
-              <a class="md-btn" href="https://github.com/LogMaks" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
-              <a class="md-btn" href="https://www.linkedin.com/in/maksim-loginov-0b7a73236/" target="_blank" rel="noopener"><span class="material-icons">business_center</span> LinkedIn</a>
-            </p>
-          </div>
-        </div>
+    <div>
+      <p class="muted">Yet another agent in multi-agent systems...</p>
+      <p>Hello! I'm <strong>Maksim Loginov</strong> — a researcher and engineer focused on Reinforcement Learning (RL), multi-agent systems, and practical AI. I design learning systems, evaluate them rigorously, and bring prototypes to production. English / German / Russian.</p>
+      <div class="row" style="flex-wrap:wrap;gap:8px">
+        <span class="chip"><span class="material-icons">psychology</span> RL / MARL</span>
+        <span class="chip"><span class="material-icons">code</span> Python · C++ · SQL</span>
+        <span class="chip"><span class="material-icons">dataset</span> MLOps · Data</span>
+        <span class="chip"><span class="material-icons">hub</span> Agents</span>
       </div>
-    </section>
+      <div style="height:1px;background:var(--md-outline);margin:10px 0"></div>
+      <p><strong>What I’m working on</strong></p>
+      <ul>
+        <li>Hierarchical and safe RL for decision support in industrial maintenance.</li>
+        <li>Agent-based simulations with uncertainty (Dempster–Shafer, Bayesian).</li>
+        <li>Open, well-documented prototypes with clean APIs and tests.</li>
+      </ul>
+      <p class="row">
+        <a class="md-btn md-contained" href="{{ '/assets/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> CV</a>
+        <a class="md-btn" href="mailto:lomaxart@gmail.com"><span class="material-icons">mail</span> E-mail </a>
+        <a class="md-btn" href="https://github.com/LogMaks" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
+        <a class="md-btn" href="https://www.linkedin.com/in/maksim-loginov-0b7a73236/" target="_blank" rel="noopener"><span class="material-icons">business_center</span> LinkedIn</a>
+      </p>
+    </div>
+  </div>
+</section>
 
-    <section class="card">
-      <h2 class="row" style="margin:0 0 8px"><span class="material-icons">timeline</span> Timeline</h2>
-      <div>
-        <ul>
-          <li><strong>2025—now:</strong> PhD-track research in RL & multi-agent systems.</li>
-          <li><strong>2023—2025:</strong> Master’s — ML, optimization, industrial AI projects.</li>
-          <li><strong>Earlier:</strong> Software engineering: Python/C++, data, systems.</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>© <span id="year"></span> • Logmaks</footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+<section class="card">
+  <h2 class="row" style="margin:0 0 8px"><span class="material-icons">timeline</span> Timeline</h2>
+  <div>
+    <ul>
+      <li><strong>2025—now:</strong> PhD-track research in RL & multi-agent systems.</li>
+      <li><strong>2023—2025:</strong> Master’s — ML, optimization, industrial AI projects.</li>
+      <li><strong>Earlier:</strong> Software engineering: Python/C++, data, systems.</li>
+    </ul>
+  </div>
+</section>
