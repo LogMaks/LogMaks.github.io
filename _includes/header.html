@@ -1,21 +1,12 @@
-<header>
-  <div class="wrap row" style="justify-content:space-between">
-    <div class="row" style="gap:10px">
-      <a href="{{ '/' | relative_url }}" class="md-btn md-contained" style="padding:8px 12px;border-radius:10px">
-        <span class="material-icons">blur_on</span>
-        <span>{{ site.title | default: 'Personal Site' }}</span>
-      </a>
-      <nav>
-        <a href="{{ '/posts/' | relative_url }}" {% if page.url == '/posts/' %}aria-current="page"{% endif %}>Posts</a>
-        <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
-        <a href="{{ '/assets/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
-      </nav>
-    </div>
-    <div class="row">
-      <a class="md-btn md-outlined" href="https://github.com/{{ site.github_username | default: 'logmaks' }}" target="_blank" rel="noopener">
-        <span class="material-icons">code</span>
-        GitHub
-      </a>
-    </div>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}">Latest</a>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
   </div>
 </header>
+

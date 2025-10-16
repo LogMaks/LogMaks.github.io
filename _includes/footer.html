@@ -1,18 +1,8 @@
-<footer>
-  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
-    <div>
-      <strong>{{ site.title | default: 'Personal Site' }}</strong>
-      <p class="muted" style="margin:6px 0 0">Исследования, дизайн‑системы, прототипы.</p>
-    </div>
-    <div class="row" style="justify-content:flex-end;gap:10px">
-      <a class="md-btn" href="{{ '/posts/' | relative_url }}">Блог</a>
-      <a class="md-btn" href="{{ '/about/' | relative_url }}">Обо мне</a>
-      <a class="md-btn" href="{{ '/assets/cv_en.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
-    </div>
-  </div>
-  <div class="wrap" style="justify-content:space-between;display:flex;margin-top:8px">
-    <span class="muted">© <span id="year"></span></span>
-    <span class="muted">Сделано с Jekyll</span>
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      © {{ "now" | date: "%Y" }} {{ site.title }} · Powered by Jekyll
+    </p>
   </div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+

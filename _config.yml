@@ -1,23 +1,41 @@
-theme: jekyll-theme-minimal
-
-title: "LogMaks's homepage"
-description: "Bookmark this to keep an eye on my project updates!"
-github_username: logmaks
-lang: en
+title: "LogMaks Journal"
+description: "Научный блог, заметки и проекты"
 url: "https://logmaks.github.io"
-baseurl: ""         # для user/organization pages
+baseurl: ""
 
-# Markdown и подсветка (из коробки на GitHub Pages)
+# GitHub Pages совместимые плагины
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 markdown: kramdown
 highlighter: rouge
-kramdown:
-  input: GFM        # GitHub-style markdown (таблицы, чекбоксы и т.п.)
-  math_engine: mathjax
+permalink: /posts/:title/
+timezone: Europe/Moscow
 
-# Красивые URL для постов и страниц
-permalink: /:categories/:year/:month/:day/:title:output_ext
+author:
+  name: "LogMaks"
+  email: ""
+  url: "/about/"
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "LogMaks"
+      image: ""
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
