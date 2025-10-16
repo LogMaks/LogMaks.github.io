@@ -1,5 +1,5 @@
 ---
-title: "Dempster–Shafer Theory for Condition Diagnosis"
+title: "Dempster–Shafer Theory for Condition Diagnosis(Publication)"
 image: "/assets/dsp1.png"
 excerpt: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of a Continuous Casting Machines."
 ---
