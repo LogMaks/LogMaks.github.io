@@ -13,12 +13,8 @@ The main goal was to create a mathematical and software framework that aggregate
 Key results include:
 
 A multi-level DST-based diagnostic model for data fusion under uncertainty.
-
 Implementation of adaptive evidence combination, switching between Dempster’s and Yager’s rules depending on the conflict coefficient.
-
 Experimental validation showing a 5–6% accuracy improvement and reduced false confidence in high-conflict scenarios.
-
 A comparison with the open-source pyds library confirmed better speed and robustness of the proposed approach.
-
 The developed system provides a foundation for intelligent maintenance, IoT-based monitoring, and future multi-agent diagnostic architectures in industrial automation.
 
