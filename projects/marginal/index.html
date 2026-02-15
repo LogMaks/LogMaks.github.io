@@ -85,9 +85,9 @@
 <table>
   <tbody>
     <tr>
-      <td>[p(x, y) = p(x_1)\prod_{i=2}^n p(x_i</td>
+      <td>$p(x, y) = p(x_1)\prod_{i=2}^n p(x_i</td>
       <td>x_{i-1}) \prod_{i=1}^n p(y_i</td>
-      <td>x_i)]</td>
+      <td>x_i)$</td>
     </tr>
   </tbody>
 </table>
@@ -95,8 +95,8 @@
 <table>
   <tbody>
     <tr>
-      <td>This structure ensures that posterior marginals (p(x_i</td>
-      <td>y)) remain tractable via forward–backward recursion.</td>
+      <td>This structure ensures that posterior marginals $p(x_i</td>
+      <td>y)$ remain tractable via forward–backward recursion.</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@
 
 <p>The crucial structural condition is:</p>
 
-<p>[p(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})]</p>
+<p>$p(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})$</p>
 
 <p>If this factorization holds, posterior marginals remain computable in linear time — even under belief-based fusion.</p>
 
@@ -160,17 +160,17 @@
 <table>
   <tbody>
     <tr>
-      <td>[P(s’</td>
-      <td>s,a)]</td>
+      <td>$P(s’</td>
+      <td>s,a)$</td>
     </tr>
   </tbody>
 </table>
 
 <p>we define:</p>
 
-<p>[M_{s,a}(A), \quad A \subseteq \mathcal{S}]</p>
+<p>$M_{s,a}(A), \quad A \subseteq \mathcal{S}$</p>
 
-<p>where ( M_{s,a} ) is a basic belief assignment over subsets of states.</p>
+<p>where $M_{s,a}$ is a basic belief assignment over subsets of states.</p>
 
 <p>This leads to:</p>
 
@@ -236,15 +236,13 @@
 
 <p>However, if:</p>
 
-<p>[M(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})]</p>
+<p>$M(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})$</p>
 
 <p>then marginal computation requires:</p>
 
-<p>[
-\mathcal{O}(n)
-]</p>
+<p>$\mathcal{O}(n)$</p>
 
-<p>operations in sequence length ( n ).</p>
+<p>operations in sequence length $n$.</p>
 
 <p>The complexity increases with the size of the belief state space, but remains linear in horizon length.</p>
 
