@@ -82,15 +82,7 @@
 
 <p>In classical Hidden Markov Chains (HMC), the joint distribution factorizes as:</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>$p(x, y) = p(x_1)\prod_{i=2}^n p(x_i</td>
-      <td>x_{i-1}) \prod_{i=1}^n p(y_i</td>
-      <td>x_i)$</td>
-    </tr>
-  </tbody>
-</table>
+\[p(x, y) = p(x_1)\prod_{i=2}^n p(x_i|x_{i-1}) \prod_{i=1}^n p(y_i|x_i)\]
 
 <table>
   <tbody>
@@ -139,7 +131,7 @@
 
 <p>The crucial structural condition is:</p>
 
-<p>$’p(v)\propto\prod_{i=1}^{n-1}q_i(v_i, v_{i+1})’$</p>
+\[p(v)\propto\prod_{i=1}^{n-1}q_i(v_i, v_{i+1})\]
 
 <p>If this factorization holds, posterior marginals remain computable in linear time — even under belief-based fusion.</p>
 
@@ -157,20 +149,13 @@
 
 <p>Instead of:</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>$’P(s’</td>
-      <td>s,a)’$</td>
-    </tr>
-  </tbody>
-</table>
+\[P(s'|s,a)\]
 
 <p>we define:</p>
 
-<p>$’M_{s,a}(A), \quad A \subseteq \mathcal{S}'$</p>
+\[M_{s,a}(A), \quad A \subseteq \mathcal{S}\\]
 
-<p>where $’M_{s,a}’$ is a basic belief assignment over subsets of states.</p>
+<p>where \(M_{s,a}\) is a basic belief assignment over subsets of states.</p>
 
 <p>This leads to:</p>
 
@@ -236,11 +221,11 @@
 
 <p>However, if:</p>
 
-<p>$’M(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})’$</p>
+\[M(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})\]
 
 <p>then marginal computation requires:</p>
 
-<p>$’\mathcal{O}(n)’$</p>
+\[\mathcal{O}(n)\]
 
 <p>operations in sequence length $n$.</p>
 
