@@ -61,7 +61,7 @@ img { max-width: 100%; border-radius: 8px; }
 .social-list a { display: block; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); background: #faf9ff; }
 .social-list a:hover { border-color: var(--accent); color: var(--accent-strong); }
 
-2232/* Branded buttons */
+/* Branded buttons */
 .btn-telegram { background: #229ED9; color: #fff; border-color: #229ED9; }
 .btn-telegram:hover { background: #1f8ec3; border-color: #1f8ec3; }
 .btn-scholar { background: #4285F4; color: #fff; border-color: #4285F4; }
