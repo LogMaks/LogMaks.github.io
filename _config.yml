@@ -10,7 +10,7 @@ plugins:
 
 markdown: kramdown
 kramdown:
-  math_engine: null
+  math_engine: mathjax
 highlighter: rouge
 permalink: /posts/:title/
 timezone: UTC
