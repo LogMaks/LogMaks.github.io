@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes | LogMaks — RL &amp; MAS Research</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes" />
+<meta name="author" content="LogMaks" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Why Go Beyond Classical HMM/MDP?" />
+<meta property="og:description" content="Why Go Beyond Classical HMM/MDP?" />
+<link rel="canonical" href="https://logmaks.github.io/projects/marginal/" />
+<meta property="og:url" content="https://logmaks.github.io/projects/marginal/" />
+<meta property="og:site_name" content="LogMaks — RL &amp; MAS Research" />
+<meta property="og:image" content="https://logmaks.github.io/assets/m_rl.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-11-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://logmaks.github.io/assets/m_rl.png" />
+<meta property="twitter:title" content="Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"LogMaks"},"dateModified":"2025-11-07T00:00:00+00:00","datePublished":"2025-11-07T00:00:00+00:00","description":"Why Go Beyond Classical HMM/MDP?","headline":"Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes","image":"https://logmaks.github.io/assets/m_rl.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://logmaks.github.io/projects/marginal/"},"url":"https://logmaks.github.io/projects/marginal/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">LogMaks — RL & MAS Research</a>
+    <nav class="nav">
+      <a href="/">Latest</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About Me</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="site-main container">
+      <article class="post">
+  
+  <img class="post-cover" src="/assets/m_rl.png" alt="Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes">
+  
+  <header>
+    <h1 class="post-title">Reinforcement Learning Under Epistemic Uncertainty: From Markov Models to Evidential Decision Processes</h1>
+    <p class="post-meta">07 November 2025</p>
+  </header>
+  <section class="post-body">
+    <h2 id="reinforcement-learning-under-epistemic-uncertainty">Reinforcement Learning Under Epistemic Uncertainty</h2>
+<h3 id="from-markov-models-to-evidential-decision-processes">From Markov Models to Evidential Decision Processes</h3>
+
+<p>This research project investigates how <strong>sequential decision-making under uncertainty</strong> can be reformulated when classical probabilistic assumptions are insufficient.</p>
+
+<p>The core thesis is straightforward:</p>
+
+<blockquote>
+  <p>Classical Markov Decision Processes (MDP) and Hidden Markov Models (HMM) are computationally powerful but epistemically fragile.</p>
+</blockquote>
+
+<p>When uncertainty is not purely stochastic but partially epistemic (model uncertainty, sensor ambiguity, structural ignorance), Bayesian posterior inference becomes overconfident. This project develops a mathematically grounded framework that integrates:</p>
+
+<ul>
+  <li>Markovian structure (HMC / PMC / TMC),</li>
+  <li>Dempster–Shafer theory of evidence,</li>
+  <li>Reinforcement Learning (RL),</li>
+</ul>
+
+<p>into a unified <strong>Evidential–Markov Decision framework</strong>.</p>
+
+<hr />
+
+<h3 id="1-motivation-limits-of-classical-hmmmdp">1. Motivation: Limits of Classical HMM/MDP</h3>
+
+<p>In classical Hidden Markov Chains (HMC), the joint distribution factorizes as:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[p(x, y) = p(x_1)\prod_{i=2}^n p(x_i</td>
+      <td>x_{i-1}) \prod_{i=1}^n p(y_i</td>
+      <td>x_i)]</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>This structure ensures that posterior marginals (p(x_i</td>
+      <td>y)) remain tractable via forward–backward recursion.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>However, in real industrial systems:</p>
+
+<ul>
+  <li>Sensors are imperfect or partially reliable,</li>
+  <li>Priors are imprecise,</li>
+  <li>Observations may correspond to <em>sets</em> of hypotheses,</li>
+  <li>Degradation models drift over time.</li>
+</ul>
+
+<p>Strict Bayesian updating forces epistemic uncertainty into precise probabilities — producing artificial confidence.</p>
+
+<p>This is structurally incorrect.</p>
+
+<hr />
+
+<h3 id="2-theoretical-backbone-markov-chains--evidence-theory">2. Theoretical Backbone: Markov Chains + Evidence Theory</h3>
+
+<p>The theoretical basis relies on extending:</p>
+
+<ul>
+  <li>Hidden Markov Chains (HMC),</li>
+  <li>Pairwise Markov Chains (PMC),</li>
+  <li>Triplet Markov Chains (TMC),</li>
+</ul>
+
+<p>using <strong>Dempster–Shafer fusion</strong>.</p>
+
+<p>The key insight from evidential Markov models:</p>
+
+<ul>
+  <li>Replace probabilistic priors with belief assignments,</li>
+  <li>Replace likelihoods with evidential observations,</li>
+  <li>Preserve Markov factorization,</li>
+  <li>Retain linear-time computability of marginals.</li>
+</ul>
+
+<p>The crucial structural condition is:</p>
+
+<p>[p(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})]</p>
+
+<p>If this factorization holds, posterior marginals remain computable in linear time — even under belief-based fusion.</p>
+
+<p>This preserves tractability while increasing epistemic robustness.</p>
+
+<hr />
+
+<h3 id="3-from-evidential-markov-chains-to-dstmdp">3. From Evidential Markov Chains to DST–MDP</h3>
+
+<p>The central move of this project:</p>
+
+<blockquote>
+  <p>Replace transition probabilities in MDP with belief assignments.</p>
+</blockquote>
+
+<p>Instead of:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[P(s’</td>
+      <td>s,a)]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>we define:</p>
+
+<p>[M_{s,a}(A), \quad A \subseteq \mathcal{S}]</p>
+
+<p>where ( M_{s,a} ) is a basic belief assignment over subsets of states.</p>
+
+<p>This leads to:</p>
+
+<ul>
+  <li>Belief-based transition dynamics,</li>
+  <li>Imprecise value functions,</li>
+  <li>Robust policy evaluation,</li>
+  <li>Explicit representation of ignorance.</li>
+</ul>
+
+<p>The Bellman equation generalizes into a belief-space operator.</p>
+
+<p>Key research question:</p>
+
+<blockquote>
+  <p>Under what structural constraints does a belief-MDP remain computationally tractable?</p>
+</blockquote>
+
+<p>The answer lies in Markov factorization inherited from PMC/TMC theory.</p>
+
+<hr />
+
+<h3 id="4-industrial-motivation">4. Industrial Motivation</h3>
+
+<p>In industrial decision systems:</p>
+
+<ul>
+  <li>Diagnostics are uncertain,</li>
+  <li>Sensors are heterogeneous,</li>
+  <li>Safety constraints are strict,</li>
+  <li>Model misspecification is unavoidable.</li>
+</ul>
+
+<p>A purely probabilistic RL agent may:</p>
+
+<ul>
+  <li>Overfit to incorrect priors,</li>
+  <li>Exploit spurious correlations,</li>
+  <li>Fail under distribution shift.</li>
+</ul>
+
+<p>An evidential RL agent:</p>
+
+<ul>
+  <li>Separates aleatory and epistemic uncertainty,</li>
+  <li>Represents ignorance explicitly,</li>
+  <li>Enables conservative, safety-aware policies.</li>
+</ul>
+
+<p>This directly supports:</p>
+
+<ul>
+  <li>Predictive Maintenance (PdM),</li>
+  <li>Hierarchical RL under constraints,</li>
+  <li>Safe RL in partially observable environments.</li>
+</ul>
+
+<hr />
+
+<h3 id="5-computational-feasibility">5. Computational Feasibility</h3>
+
+<p>The concern is obvious: belief models explode combinatorially.</p>
+
+<p>However, if:</p>
+
+<p>[M(v) \propto \prod_{i=1}^{n-1} q_i(v_i, v_{i+1})]</p>
+
+<p>then marginal computation requires:</p>
+
+<p>[
+\mathcal{O}(n)
+]</p>
+
+<p>operations in sequence length ( n ).</p>
+
+<p>The complexity increases with the size of the belief state space, but remains linear in horizon length.</p>
+
+<p>Thus:</p>
+
+<ul>
+  <li>Epistemic generalization does <strong>not</strong> necessarily imply exponential blow-up,</li>
+  <li>Structural discipline preserves scalability.</li>
+</ul>
+
+<hr />
+
+<h3 id="6-research-directions">6. Research Directions</h3>
+
+<h3 id="61-formal-dstmdp-theory">6.1 Formal DST–MDP Theory</h3>
+<ul>
+  <li>Define belief-space Bellman operators,</li>
+  <li>Study contraction properties,</li>
+  <li>Analyze convergence guarantees.</li>
+</ul>
+
+<h3 id="62-robust-policy-optimization">6.2 Robust Policy Optimization</h3>
+<ul>
+  <li>Conservative policy iteration,</li>
+  <li>Risk-sensitive objectives under belief bounds,</li>
+  <li>Worst-case value estimation.</li>
+</ul>
+
+<h3 id="63-multi-agent-extensions">6.3 Multi-Agent Extensions</h3>
+<ul>
+  <li>Evidential MARL,</li>
+  <li>Decentralized sensor fusion,</li>
+  <li>Distributed belief coordination.</li>
+</ul>
+
+<h3 id="64-hierarchical-integration">6.4 Hierarchical Integration</h3>
+<ul>
+  <li>Strategic layer: belief abstraction,</li>
+  <li>Tactical layer: probabilistic execution,</li>
+  <li>Bridge via SMDP options.</li>
+</ul>
+
+<hr />
+
+<h3 id="7-conceptual-position">7. Conceptual Position</h3>
+
+<p>This work sits at the intersection of:</p>
+
+<ul>
+  <li>Stochastic processes,</li>
+  <li>Decision theory,</li>
+  <li>Epistemic uncertainty modeling,</li>
+  <li>Reinforcement learning.</li>
+</ul>
+
+<p>It challenges the implicit assumption that:</p>
+
+<blockquote>
+  <p>All uncertainty is probabilistic.</p>
+</blockquote>
+
+<p>Instead, it asks:</p>
+
+<blockquote>
+  <p>What if part of the uncertainty reflects structural ignorance rather than stochastic noise?</p>
+</blockquote>
+
+<hr />
+
+<h3 id="8-strategic-objective">8. Strategic Objective</h3>
+
+<p>The long-term goal is the development of a mathematically rigorous framework for:</p>
+
+<blockquote>
+  <p>Robust Reinforcement Learning under Epistemic Uncertainty.</p>
+</blockquote>
+
+<p>This requires:</p>
+
+<ul>
+  <li>Maintaining Markov tractability,</li>
+  <li>Preserving computational feasibility,</li>
+  <li>Extending beyond strict Bayesian formalism,</li>
+  <li>Embedding robustness directly into policy evaluation.</li>
+</ul>
+
+<p>If classical RL optimizes under risk,<br />
+this project aims to optimize under uncertainty <strong>about the risk model itself</strong>.</p>
+
+<blockquote>
+  <p>Updated on 15 Feb 2025.</p>
+</blockquote>
+
+  </section>
+</article>
+
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2026 LogMaks — RL & MAS Research · Powered by Passion to Science 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+  </html>
+

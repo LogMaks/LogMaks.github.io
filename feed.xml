@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://logmaks.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://logmaks.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-02-15T15:32:14+00:00</updated><id>https://logmaks.github.io/feed.xml</id><title type="html">LogMaks — RL &amp;amp; MAS Research</title><subtitle>Фокус на Marginal Hierarchical RL и асимметричные мультиагентные системы</subtitle><author><name>LogMaks</name><email></email></author><entry><title type="html">Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)</title><link href="https://logmaks.github.io/posts/hier-mro/" rel="alternate" type="text/html" title="Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)" /><published>2026-02-15T00:00:00+00:00</published><updated>2026-02-15T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/hier-mro</id><content type="html" xml:base="https://logmaks.github.io/posts/hier-mro/"><![CDATA[<h2 id="abstract">Abstract</h2>
+
+<p>This paper considers a hierarchical multi-agent reinforcement learning approach for optimizing technical maintenance and repair under uncertainty. A model is proposed that integrates strategic planning and tactical coordination with a safe learning mechanism.</p>
+
+<h2 id="short-description">Short Description</h2>
+
+<p>This paper proposes a hierarchical multi-agent reinforcement learning (HRL–MARL) framework for maintenance and repair (MRO) optimization in industrial environments under partial observability, stochastic failures, and hard operational constraints. The production–maintenance system is modeled as a Dec-POMDP, where multiple agents (equipment units and maintenance resources) act on local observations augmented with predictive maintenance (PdM) signals (e.g., RUL estimates and failure probabilities). To ensure safe operation and regulatory compliance, the decision process is constrained via a CMDP formulation using action masking (shielding) and Lagrangian penalty updates.</p>
+
+<p>The control architecture is split into two time scales: a strategic level (SMDP over options) selects high-level maintenance decisions (e.g., maintenance windows, prioritization, resource allocation), while a tactical level executes these options through multi-agent coordination under CTDE (centralized training, decentralized execution). A human-in-the-loop approval operator is introduced at the strategic level to validate or reject proposed options; rejections trigger a safe fallback policy and are also incorporated into the reward to discourage actions that increase operator intervention.</p>
+
+<p>A simulation study on a digital twin of an industrial equipment fleet compares the proposed method against baseline maintenance policies (reactive and schedule-based). Results indicate a shift from emergency repairs toward more preventive planning under limited resources, reducing failures while respecting constraints, and improving robustness in high-uncertainty regimes.</p>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[Phd article on hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO) optimization under uncertainty.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/hrl_mro.png" /><media:content medium="image" url="https://logmaks.github.io/assets/hrl_mro.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Concept note / early-stage research (2025): Marginal Hierarchical Reinforcement Learning for Asymmetric Multi-Agent Systems</title><link href="https://logmaks.github.io/posts/marginal/" rel="alternate" type="text/html" title="Concept note / early-stage research (2025): Marginal Hierarchical Reinforcement Learning for Asymmetric Multi-Agent Systems" /><published>2025-11-07T00:00:00+00:00</published><updated>2025-11-07T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/marginal</id><content type="html" xml:base="https://logmaks.github.io/posts/marginal/"><![CDATA[<h2 id="summary">Summary</h2>
+
+<p>In classical multi-agent reinforcement learning (MARL), agents share the same learning framework but operate under fixed computational and communication assumptions. Real systems are rarely homogeneous. Each autonomous unit—drone, robot, vehicle—has different resources, observation limits, and safety requirements. <strong>The proposed concept, Marginal Hierarchical Reinforcement Learning (M-HRL), treats computation as a scarce, allocatable resource.</strong></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>In classical multi-agent reinforcement learning (MARL), agents share the same learning framework but operate under fixed computational and communication assumptions. Real-world systems, however, are rarely homogeneous. Each autonomous unit—be it a drone, robot, or vehicle—possesses different resources, observation limits, and safety requirements. This asymmetry introduces a challenge that conventional MARL fails to address: how to coordinate when computation itself becomes a scarce and distributable resource.</p>
+
+<p>The proposed concept, Marginal Hierarchical Reinforcement Learning (M-HRL), extends the standard hierarchical RL paradigm beyond temporal or spatial decomposition. Instead of structuring policies around subgoals, it structures them around computational priorities. A leader agent dynamically allocates the available “budget” between safety and task-oriented layers across the coalition. The safety layer ensures collision-free motion, while the task layer focuses on mission optimization. This yields a lexicographic hierarchy of control: safety dominates reward pursuit.</p>
+
+<p>Unlike pure swarm algorithms, which rely solely on local interactions, M-HRL maintains a soft form of centrality. Leadership is not permanent; it migrates based on connection quality and agent reliability. Thus, the system avoids both extremes: full decentralization (which risks incoherence) and total centralization (which risks fragility). This creates a self-stabilizing architecture—one that can tolerate communication loss and recover coordination through distributed election.</p>
+
+<p>Philosophically, this design echoes Arrow’s Impossibility Theorem: no collective decision can satisfy all fairness axioms simultaneously. The leader’s computational authority is a pragmatic compromise—an “engineered dictatorship” of resources that preserves collective safety under rational constraints. Marginal HRL thus stands at the intersection of control theory, game theory, and machine intelligence, representing a step toward adaptive, resource-aware collectives capable of both autonomy and coherence.</p>
+
+<h2 id="key-idea">Key Idea</h2>
+
+<p>M-HRL extends hierarchical RL beyond temporal/spatial subgoals toward <strong>computational priorities</strong>:</p>
+
+<ul>
+  <li>A <strong>leader</strong> forms a <strong>dynamic coalition</strong> and allocates the available budget between two layers:
+    <ul>
+      <li><strong>Safety Layer</strong> — collision avoidance with hard priority.</li>
+      <li><strong>Task Layer</strong> — mission optimization with adaptive share.</li>
+    </ul>
+  </li>
+  <li>The overall control is <strong>lexicographic</strong>: safety dominates reward pursuit.</li>
+  <li><strong>Leadership is transferable</strong> under link loss or degraded quality (handover).</li>
+</ul>
+
+<h2 id="architecture-sketch">Architecture (sketch)</h2>
+
+<ul>
+  <li>CTDE training; decentralized execution.</li>
+  <li>Coalition selection + budget allocation ((b^S \ge b_{\min},\; b^T \ge 0)).</li>
+  <li>Merged action (a=\Phi(a^S,a^T)), safety-first.</li>
+</ul>
+
+<p>References:</p>
+<ol>
+  <li>Loginov, M. (2025). Marginal Hierarchical Reinforcement Learning for Asymmetric Multi-Agent Systems (Concept Note).
+For collaboration or feedback please contact the page of the site.</li>
+</ol>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[Work-in-progress within the framework of PhD preparation on Reinforcement Learning and Multi-Agent Systems.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/marginal.png" /><media:content medium="image" url="https://logmaks.github.io/assets/marginal.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hello, Journal</title><link href="https://logmaks.github.io/posts/hello-world/" rel="alternate" type="text/html" title="Hello, Journal" /><published>2025-09-26T00:00:00+00:00</published><updated>2025-09-26T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/hello-world</id><content type="html" xml:base="https://logmaks.github.io/posts/hello-world/"><![CDATA[<p>Hello! I’m Maksim Loginov, a researcher and developer passionate about Reinforcement Learning (RL), Multi-Agent Systems, and intelligent automation.
+My work focuses on applying advanced machine learning methods to optimize complex industrial processes — particularly in maintenance planning, diagnostics, and reliability management.</p>
+
+<p>I combine my background in Python, C++, and data analysis with a strong interest in AI research and system design. Currently, I’m exploring how hierarchical and safe reinforcement learning can enhance decision-making in real-world industrial environments.</p>
+
+<p>On this page, I’ll share my ongoing projects, research notes, and experiments — from simulation-based studies to practical implementations.
+If you’re interested in AI, RL, or industrial automation, you’re in the right place.</p>
+
+<p>Welcome aboard — and stay tuned for updates!</p>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[First post in the new blog.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/avatar.jpg" /><media:content medium="image" url="https://logmaks.github.io/assets/avatar.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

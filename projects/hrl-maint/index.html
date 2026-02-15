@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track) | LogMaks — RL &amp; MAS Research</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track)" />
+<meta name="author" content="LogMaks" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="PhD track: formal foundations and engineering of safe hierarchical multi-agent RL for maintenance-and-repair decision support under uncertainty." />
+<meta property="og:description" content="PhD track: formal foundations and engineering of safe hierarchical multi-agent RL for maintenance-and-repair decision support under uncertainty." />
+<link rel="canonical" href="https://logmaks.github.io/projects/hrl-maint/" />
+<meta property="og:url" content="https://logmaks.github.io/projects/hrl-maint/" />
+<meta property="og:site_name" content="LogMaks — RL &amp; MAS Research" />
+<meta property="og:image" content="https://logmaks.github.io/assets/hrl_phd.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://logmaks.github.io/assets/hrl_phd.png" />
+<meta property="twitter:title" content="Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"LogMaks"},"dateModified":"2025-09-30T00:00:00+00:00","datePublished":"2025-09-30T00:00:00+00:00","description":"PhD track: formal foundations and engineering of safe hierarchical multi-agent RL for maintenance-and-repair decision support under uncertainty.","headline":"Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track)","image":"https://logmaks.github.io/assets/hrl_phd.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://logmaks.github.io/projects/hrl-maint/"},"url":"https://logmaks.github.io/projects/hrl-maint/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">LogMaks — RL & MAS Research</a>
+    <nav class="nav">
+      <a href="/">Latest</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About Me</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="site-main container">
+      <article class="post">
+  
+  <img class="post-cover" src="/assets/hrl_phd.png" alt="Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track)">
+  
+  <header>
+    <h1 class="post-title">Hierarchical Multi-Agent Reinforcement Learning for Industrial MRO (PhD Research Track)</h1>
+    <p class="post-meta">30 September 2025</p>
+  </header>
+  <section class="post-body">
+    <p><em>Under active research</em></p>
+
+<p>This topic is developed as part of my PhD (Candidate) research, focused on building a rigorous and implementable framework for safe hierarchical multi-agent reinforcement learning (HRL–MARL) in industrial maintenance and repair (MRO).</p>
+
+<h3 id="phd-research-objective">PhD research objective</h3>
+
+<p>To develop and validate a formal model + algorithmic stack for multi-level MRO decision-making that:</p>
+
+<ul>
+  <li>
+    <p>operates under partial observability and stochastic failures,</p>
+  </li>
+  <li>
+    <p>respects hard safety/resource constraints,</p>
+  </li>
+  <li>
+    <p>scales to multiple interacting assets and maintenance teams,</p>
+  </li>
+  <li>
+    <p>remains auditable via human oversight.</p>
+  </li>
+</ul>
+
+<h3 id="research-tasks-core-contributions">Research tasks (core contributions)</h3>
+
+<ul>
+  <li>
+    <p>Formalization: unify Dec-POMDP (distributed observations) with SMDP/options (temporal abstraction) and CMDP (constraints), defining consistent state/observation spaces and interfaces between levels.</p>
+  </li>
+  <li>
+    <p>Safe decision-making: design constraint enforcement through action masking (shielding) and Lagrangian constrained optimization, including stability of penalty updates and violation guarantees.</p>
+  </li>
+  <li>
+    <p>Hierarchical coordination: develop a two-level control scheme:</p>
+  </li>
+  <li>
+    <p>Strategic layer: maintenance windows, prioritization, resource balancing (long horizon).</p>
+  </li>
+  <li>
+    <p>Tactical layer: real-time dispatching and coordination of crews/actions (short horizon) using CTDE.</p>
+  </li>
+  <li>
+    <p>Human-in-the-loop governance: formalize expert approval/override at the strategic level as a control component and learning signal, optimizing for reduced intervention without sacrificing safety.</p>
+  </li>
+  <li>
+    <p>Digital-twin validation: implement a simulation environment to test policies across stress regimes (resource bottlenecks, nonstationarity, cascading events) with metrics aligned to industry: downtime, SLA delays, аварийность, cost, constraint violations, intervention rate.</p>
+  </li>
+</ul>
+
+<h3 id="expected-outcomes">Expected outcomes</h3>
+
+<ul>
+  <li>
+    <p>A PhD-grade formal framework for hierarchical constrained MARL in MRO.</p>
+  </li>
+  <li>
+    <p>A reproducible digital-twin benchmark + evaluation protocol.</p>
+  </li>
+  <li>
+    <p>Practical guidance for deploying RL as decision support in regulated industrial settings (safety/compliance-first), aligned with Industry 5.0 requirements (resilience + human-centric control).</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>updated 15 Feb 2026</p>
+</blockquote>
+
+  </section>
+</article>
+
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2026 LogMaks — RL & MAS Research · Powered by Passion to Science 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+  </html>
+
