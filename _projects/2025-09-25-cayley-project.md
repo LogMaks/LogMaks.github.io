@@ -1,5 +1,5 @@
 ---
-title: "Participation in CayleyPy(Project)"
+title: "Participation in CayleyPy(Project)[Past Project]"
 image: "/assets/cayley.png"
 excerpt: "AI-based library to work with extremely large graphs."
 Supporting: "Cayley graphs, Schreier coset graphs, more to be added."
