@@ -14,5 +14,5 @@ My participation centers on exploring algorithmic optimization within group oper
 
 CayleyPy provides not only a platform for experimenting with algebraic structures but also a testing ground for ideas at the intersection of theory and applied computation. This collaboration encourages rigorous thinking, open-source contribution, and long-term progress toward more adaptive and mathematically grounded AI systems.
 
-_Temporaly suspended_
-_Updated 15 Feb 2026_
+* Temporaly suspended *
+* Updated 15 Feb 2026 *
