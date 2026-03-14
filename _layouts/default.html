@@ -10,6 +10,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+
+    {% if page.layout == "post" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ page.title | escape }}",
+      "author": {
+        "@type": "Person",
+        "name": "Maksim Loginov"
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      "url": "{{ page.url | absolute_url }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url | absolute_url }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LogMaks Research Blog",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/assets/favicon.png' | absolute_url }}"
+        }
+      },
+      "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}"
+    }
+    </script>
+    {% endif %}
   </head>
   <body>
     {% include header.html %}
@@ -18,5 +48,4 @@
     </main>
     {% include footer.html %}
   </body>
-  </html>
-
+</html>

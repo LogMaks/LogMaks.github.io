@@ -1,5 +1,17 @@
+# robots.txt for logmaks.github.io
+# Allows search engines to index the entire site
+
 User-agent: *
 Allow: /
 
-Sitemap: https://logmaks.github.io/sitemap.xml
+# Prevent indexing of internal technical paths if they appear
+Disallow: /404.html
+Disallow: /search/
+Disallow: /tags/
+Disallow: /categories/
 
+# Crawl delay for polite crawling (optional)
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://logmaks.github.io/sitemap.xml

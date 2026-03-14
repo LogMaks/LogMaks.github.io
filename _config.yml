@@ -1,16 +1,18 @@
 title: "LogMaks — RL & MAS Research"
-description: "Фокус на Marginal Hierarchical RL и асимметричные мультиагентные системы"
+description: "Focus on Marginal Hierarchical RL and asymmetric multi-agent systems"
 url: "https://logmaks.github.io"
 baseurl: ""
 
-# GitHub Pages совместимые плагины
+# GitHub Pages compatible plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+
 highlighter: rouge
 permalink: /posts/:title/
 timezone: UTC
@@ -52,3 +54,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+google_site_verification: ""
