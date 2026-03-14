@@ -151,3 +151,8 @@ The long-term objective is to better understand how adaptive decision systems ca
 ---
 
 *This article marks the beginning of the StrataMar research initiative.*
+
+## Project Links
+
+Website: https://stratamar.net  
+Research Blog: https://logmaks.github.io  
