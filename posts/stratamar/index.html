@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Launching the StrataMar Project | LogMaks — RL &amp; MAS Research</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Launching the StrataMar Project" />
+<meta name="author" content="LogMaks" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Reinforcement Learning for Decision-Making in Complex Systems" />
+<meta property="og:description" content="Reinforcement Learning for Decision-Making in Complex Systems" />
+<link rel="canonical" href="https://logmaks.github.io/posts/stratamar/" />
+<meta property="og:url" content="https://logmaks.github.io/posts/stratamar/" />
+<meta property="og:site_name" content="LogMaks — RL &amp; MAS Research" />
+<meta property="og:image" content="https://logmaks.github.io/assets/stratamar.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://logmaks.github.io/assets/stratamar.png" />
+<meta property="twitter:title" content="Launching the StrataMar Project" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"LogMaks"},"dateModified":"2026-03-07T00:00:00+00:00","datePublished":"2026-03-07T00:00:00+00:00","description":"Reinforcement Learning for Decision-Making in Complex Systems","headline":"Launching the StrataMar Project","image":"https://logmaks.github.io/assets/stratamar.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://logmaks.github.io/posts/stratamar/"},"url":"https://logmaks.github.io/posts/stratamar/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">LogMaks — RL & MAS Research</a>
+    <nav class="nav">
+      <a href="/">Latest</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About Me</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main class="site-main container">
+      <article class="post">
+  
+  <img class="post-cover" src="/assets/stratamar.png" alt="Launching the StrataMar Project">
+  
+  <header>
+    <h1 class="post-title">Launching the StrataMar Project</h1>
+    <p class="post-meta">07 March 2026</p>
+  </header>
+  <section class="post-body">
+    <p>Over the past several years my research has been focused on reinforcement learning, decision theory, and the broader problem of decision-making under uncertainty.</p>
+
+<p>Many real-world systems—industrial infrastructure, maintenance operations, logistics networks, and complex technical installations—operate in environments where decisions must be made with incomplete information, changing conditions, and limited resources.</p>
+
+<p>Traditional optimization approaches often assume stable models of the environment. In practice, however, industrial systems rarely behave in such a predictable way. Uncertainty, delayed effects of decisions, and partial observability are the rule rather than the exception.</p>
+
+<p>These observations gradually led to the idea of building a research and engineering platform for studying adaptive decision-making systems.</p>
+
+<p>This idea became the foundation of the <strong>StrataMar project</strong>.</p>
+
+<hr />
+<p><img src="/assets/stratamar_arch.png" alt="StrataMar Architecture" /></p>
+
+<h2 id="what-is-stratamar">What is StrataMar</h2>
+
+<p>StrataMar is a research initiative focused on the development of intelligent decision-support systems for complex environments.</p>
+
+<p>The project explores how modern reinforcement learning methods can be combined with probabilistic reasoning, constrained optimization, and simulation-based experimentation in order to support decision-making in uncertain and dynamic systems.</p>
+
+<p>Rather than focusing purely on prediction or purely on static optimization, the project investigates <strong>adaptive decision policies</strong> that evolve through interaction with simulated environments.</p>
+
+<p>In practical terms, StrataMar aims to provide a framework where intelligent agents can learn how to operate in complex systems while respecting operational constraints such as safety, resource limitations, and economic costs.</p>
+
+<hr />
+
+<h2 id="why-reinforcement-learning">Why Reinforcement Learning</h2>
+
+<p>Reinforcement learning provides a natural mathematical framework for modeling sequential decision processes.</p>
+
+<p>In this framework an agent interacts with an environment over time and gradually improves its policy by observing the consequences of its actions.</p>
+
+<p>This paradigm is particularly suitable for systems where:</p>
+
+<ul>
+  <li>decisions are sequential</li>
+  <li>system dynamics are uncertain</li>
+  <li>the environment evolves over time</li>
+  <li>actions have delayed consequences</li>
+</ul>
+
+<p>Such problems naturally correspond to Markov Decision Processes and their extensions.</p>
+
+<p>However, applying reinforcement learning in real operational environments raises additional challenges. Industrial systems often involve safety constraints, partial observability, and uncertain system dynamics.</p>
+
+<p>Addressing these issues requires extending classical reinforcement learning approaches with ideas from decision theory and robust optimization.</p>
+
+<hr />
+
+<h2 id="research-directions">Research Directions</h2>
+
+<p>The StrataMar project explores several interconnected research directions.</p>
+
+<h3 id="decision-making-under-uncertainty">Decision-Making Under Uncertainty</h3>
+
+<p>Real systems rarely provide perfect information. Sensors can be noisy, system states may be partially observable, and unexpected events can occur.</p>
+
+<p>For this reason the project investigates methods for representing and reasoning about uncertainty within reinforcement learning frameworks.</p>
+
+<h3 id="hierarchical-and-multi-agent-systems">Hierarchical and Multi-Agent Systems</h3>
+
+<p>Large technical systems are rarely controlled by a single decision process. Instead they consist of multiple interacting subsystems operating at different temporal and functional scales.</p>
+
+<p>StrataMar explores hierarchical decision architectures where different layers are responsible for strategic planning, operational control, and local decision processes.</p>
+
+<h3 id="constrained-and-robust-reinforcement-learning">Constrained and Robust Reinforcement Learning</h3>
+
+<p>In industrial environments decisions must satisfy operational constraints such as safety requirements, resource availability, and economic limitations.</p>
+
+<p>The project studies reinforcement learning methods that explicitly incorporate constraints and robustness considerations.</p>
+
+<h3 id="simulation-driven-experimentation">Simulation-Driven Experimentation</h3>
+
+<p>Before intelligent decision systems can be deployed in real-world environments they must be extensively tested.</p>
+
+<p>A central component of the StrataMar initiative is therefore the development of simulation environments that allow experimentation with different decision policies and system configurations.</p>
+
+<hr />
+
+<h2 id="what-makes-the-approach-different">What Makes the Approach Different</h2>
+
+<p>Many existing industrial AI systems focus primarily on prediction. They estimate the probability of equipment failure, detect anomalies in sensor data, or forecast demand.</p>
+
+<p>While prediction is useful, it does not directly answer the more important operational question:</p>
+
+<p><strong>What decision should be taken next?</strong></p>
+
+<p>Other systems rely on classical optimization techniques. These methods are effective when system models are well understood and relatively stable, but they often struggle in environments characterized by uncertainty and dynamic changes.</p>
+
+<p>The StrataMar approach attempts to bridge this gap.</p>
+
+<p>Instead of focusing only on prediction or only on optimization, the project investigates <strong>decision architectures</strong> that combine:</p>
+
+<ul>
+  <li>sequential decision modeling</li>
+  <li>reinforcement learning</li>
+  <li>uncertainty-aware reasoning</li>
+  <li>constrained optimization</li>
+  <li>simulation-based validation</li>
+</ul>
+
+<p>The goal is not simply to train agents that perform well in benchmark environments, but to explore the design of <strong>robust decision-support systems capable of operating in uncertain real-world conditions</strong>.</p>
+
+<hr />
+
+<h2 id="architectural-perspective">Architectural Perspective</h2>
+
+<p>A distinguishing feature of the StrataMar project is its architectural perspective.</p>
+
+<p>Rather than designing a single intelligent agent, the system is conceptualized as a <strong>hierarchical decision architecture</strong>.</p>
+
+<p>Different layers of the system operate at different time scales and levels of abstraction:</p>
+
+<ul>
+  <li>strategic planning layers</li>
+  <li>operational decision agents</li>
+  <li>monitoring and simulation layers</li>
+</ul>
+
+<p>This structure reflects the way complex technical systems are typically managed and enables coordination between multiple decision processes.</p>
+
+<hr />
+
+<h2 id="relation-to-ongoing-research">Relation to Ongoing Research</h2>
+
+<p>The StrataMar initiative is closely connected to my ongoing research on reinforcement learning and decision-making under uncertainty.</p>
+
+<p>The broader objective of this work is to explore how ideas from reinforcement learning, probabilistic reasoning, and decision theory can be transformed into practical engineering tools.</p>
+
+<p>In this sense StrataMar serves both as:</p>
+
+<ul>
+  <li>a research platform for experimentation</li>
+  <li>a prototype architecture for future decision-support systems</li>
+</ul>
+
+<hr />
+
+<h2 id="looking-ahead">Looking Ahead</h2>
+
+<p>The project is currently in its early stages.</p>
+
+<p>The immediate focus is on the development of the simulation environment and the core architecture of the platform.</p>
+
+<p>Future work will include:</p>
+
+<ul>
+  <li>experimental studies of reinforcement learning algorithms</li>
+  <li>investigation of uncertainty modeling techniques</li>
+  <li>development of hierarchical and multi-agent decision architectures</li>
+  <li>exploration of real-world application scenarios</li>
+</ul>
+
+<p>The long-term objective is to better understand how adaptive decision systems can operate in complex environments characterized by uncertainty, constraints, and evolving system dynamics.</p>
+
+<hr />
+
+<p><em>This article marks the beginning of the StrataMar research initiative.</em></p>
+
+  </section>
+</article>
+
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2026 LogMaks — RL & MAS Research · Powered by Passion to Science 
+    </p>
+  </div>
+</footer>
+
+
+  </body>
+  </html>
+

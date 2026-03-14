@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://logmaks.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://logmaks.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-14T18:24:00+00:00</updated><id>https://logmaks.github.io/feed.xml</id><title type="html">LogMaks — RL &amp;amp; MAS Research</title><subtitle>Фокус на Marginal Hierarchical RL и асимметричные мультиагентные системы</subtitle><author><name>LogMaks</name><email></email></author><entry><title type="html">A PhD Research Project: Hierarchical Decision-Making Under Uncertainty</title><link href="https://logmaks.github.io/posts/recent-public/" rel="alternate" type="text/html" title="A PhD Research Project: Hierarchical Decision-Making Under Uncertainty" /><published>2026-03-14T00:00:00+00:00</published><updated>2026-03-14T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/recent-public</id><content type="html" xml:base="https://logmaks.github.io/posts/recent-public/"><![CDATA[<p>On a recently accepted paper, a proof-of-concept implementation, and the broader direction of the research</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://logmaks.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://logmaks.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-14T18:56:36+00:00</updated><id>https://logmaks.github.io/feed.xml</id><title type="html">LogMaks — RL &amp;amp; MAS Research</title><subtitle>Фокус на Marginal Hierarchical RL и асимметричные мультиагентные системы</subtitle><author><name>LogMaks</name><email></email></author><entry><title type="html">A PhD Research Project: Hierarchical Decision-Making Under Uncertainty</title><link href="https://logmaks.github.io/posts/recent-public/" rel="alternate" type="text/html" title="A PhD Research Project: Hierarchical Decision-Making Under Uncertainty" /><published>2026-03-14T00:00:00+00:00</published><updated>2026-03-14T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/recent-public</id><content type="html" xml:base="https://logmaks.github.io/posts/recent-public/"><![CDATA[<p>On a recently accepted paper, a proof-of-concept implementation, and the broader direction of the research</p>
 
 <p>Recently the thoughts of Marvin had to step aside for a while: most of my time was devoted to working on research papers that will eventually form part of my PhD dissertation. Fortunately, the effort was worthwhile — the papers have been accepted after peer review. This makes it a good moment to briefly summarize the core ideas behind the research project and the direction in which it is evolving.</p>
 
@@ -101,7 +101,163 @@ and the cost of representing and computing policies.</li>
 
 <p>The acceptance of the article and the publication of the proof-of-concept represent an important milestone. They indicate that the conceptual framework has passed an initial stage of external evaluation.
 However, this should not be seen as a final result. Rather, the project currently represents a transition from an internal research idea to a structured and publicly discussable framework. The next steps will involve further development of the theoretical model, more extensive simulations, and eventually real-world applications in industrial settings.The most important outcome at this stage is not the completion of the system, but the confirmation that the research direction is coherent, mathematically grounded, and practically motivated.
-The broader vision is to create a decision system that can be applied in various domains where uncertainty, time irregularity, and limited information are fundamental challenges. This could include not only industrial maintenance but also areas such as healthcare, finance, and autonomous systems. The ultimate goal is to contribute to the development of intelligent decision systems that are both effective and computationally efficient, capable of operating reliably in complex and uncertain environments.</p>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[Recently Published Research: Reinforcement Learning Under Epistemic Uncertainty]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/post.jpg" /><media:content medium="image" url="https://logmaks.github.io/assets/post.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)</title><link href="https://logmaks.github.io/posts/hier-mro/" rel="alternate" type="text/html" title="Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)" /><published>2026-02-15T00:00:00+00:00</published><updated>2026-02-15T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/hier-mro</id><content type="html" xml:base="https://logmaks.github.io/posts/hier-mro/"><![CDATA[<h2 id="abstract">Abstract</h2>
+The broader vision is to create a decision system that can be applied in various domains where uncertainty, time irregularity, and limited information are fundamental challenges. This could include not only industrial maintenance but also areas such as healthcare, finance, and autonomous systems. The ultimate goal is to contribute to the development of intelligent decision systems that are both effective and computationally efficient, capable of operating reliably in complex and uncertain environments.</p>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[Recently Published Research: Reinforcement Learning Under Epistemic Uncertainty]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/post.jpg" /><media:content medium="image" url="https://logmaks.github.io/assets/post.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Launching the StrataMar Project</title><link href="https://logmaks.github.io/posts/stratamar/" rel="alternate" type="text/html" title="Launching the StrataMar Project" /><published>2026-03-07T00:00:00+00:00</published><updated>2026-03-07T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/stratamar</id><content type="html" xml:base="https://logmaks.github.io/posts/stratamar/"><![CDATA[<p>Over the past several years my research has been focused on reinforcement learning, decision theory, and the broader problem of decision-making under uncertainty.</p>
+
+<p>Many real-world systems—industrial infrastructure, maintenance operations, logistics networks, and complex technical installations—operate in environments where decisions must be made with incomplete information, changing conditions, and limited resources.</p>
+
+<p>Traditional optimization approaches often assume stable models of the environment. In practice, however, industrial systems rarely behave in such a predictable way. Uncertainty, delayed effects of decisions, and partial observability are the rule rather than the exception.</p>
+
+<p>These observations gradually led to the idea of building a research and engineering platform for studying adaptive decision-making systems.</p>
+
+<p>This idea became the foundation of the <strong>StrataMar project</strong>.</p>
+
+<hr />
+<p><img src="/assets/stratamar_arch.png" alt="StrataMar Architecture" /></p>
+
+<h2 id="what-is-stratamar">What is StrataMar</h2>
+
+<p>StrataMar is a research initiative focused on the development of intelligent decision-support systems for complex environments.</p>
+
+<p>The project explores how modern reinforcement learning methods can be combined with probabilistic reasoning, constrained optimization, and simulation-based experimentation in order to support decision-making in uncertain and dynamic systems.</p>
+
+<p>Rather than focusing purely on prediction or purely on static optimization, the project investigates <strong>adaptive decision policies</strong> that evolve through interaction with simulated environments.</p>
+
+<p>In practical terms, StrataMar aims to provide a framework where intelligent agents can learn how to operate in complex systems while respecting operational constraints such as safety, resource limitations, and economic costs.</p>
+
+<hr />
+
+<h2 id="why-reinforcement-learning">Why Reinforcement Learning</h2>
+
+<p>Reinforcement learning provides a natural mathematical framework for modeling sequential decision processes.</p>
+
+<p>In this framework an agent interacts with an environment over time and gradually improves its policy by observing the consequences of its actions.</p>
+
+<p>This paradigm is particularly suitable for systems where:</p>
+
+<ul>
+  <li>decisions are sequential</li>
+  <li>system dynamics are uncertain</li>
+  <li>the environment evolves over time</li>
+  <li>actions have delayed consequences</li>
+</ul>
+
+<p>Such problems naturally correspond to Markov Decision Processes and their extensions.</p>
+
+<p>However, applying reinforcement learning in real operational environments raises additional challenges. Industrial systems often involve safety constraints, partial observability, and uncertain system dynamics.</p>
+
+<p>Addressing these issues requires extending classical reinforcement learning approaches with ideas from decision theory and robust optimization.</p>
+
+<hr />
+
+<h2 id="research-directions">Research Directions</h2>
+
+<p>The StrataMar project explores several interconnected research directions.</p>
+
+<h3 id="decision-making-under-uncertainty">Decision-Making Under Uncertainty</h3>
+
+<p>Real systems rarely provide perfect information. Sensors can be noisy, system states may be partially observable, and unexpected events can occur.</p>
+
+<p>For this reason the project investigates methods for representing and reasoning about uncertainty within reinforcement learning frameworks.</p>
+
+<h3 id="hierarchical-and-multi-agent-systems">Hierarchical and Multi-Agent Systems</h3>
+
+<p>Large technical systems are rarely controlled by a single decision process. Instead they consist of multiple interacting subsystems operating at different temporal and functional scales.</p>
+
+<p>StrataMar explores hierarchical decision architectures where different layers are responsible for strategic planning, operational control, and local decision processes.</p>
+
+<h3 id="constrained-and-robust-reinforcement-learning">Constrained and Robust Reinforcement Learning</h3>
+
+<p>In industrial environments decisions must satisfy operational constraints such as safety requirements, resource availability, and economic limitations.</p>
+
+<p>The project studies reinforcement learning methods that explicitly incorporate constraints and robustness considerations.</p>
+
+<h3 id="simulation-driven-experimentation">Simulation-Driven Experimentation</h3>
+
+<p>Before intelligent decision systems can be deployed in real-world environments they must be extensively tested.</p>
+
+<p>A central component of the StrataMar initiative is therefore the development of simulation environments that allow experimentation with different decision policies and system configurations.</p>
+
+<hr />
+
+<h2 id="what-makes-the-approach-different">What Makes the Approach Different</h2>
+
+<p>Many existing industrial AI systems focus primarily on prediction. They estimate the probability of equipment failure, detect anomalies in sensor data, or forecast demand.</p>
+
+<p>While prediction is useful, it does not directly answer the more important operational question:</p>
+
+<p><strong>What decision should be taken next?</strong></p>
+
+<p>Other systems rely on classical optimization techniques. These methods are effective when system models are well understood and relatively stable, but they often struggle in environments characterized by uncertainty and dynamic changes.</p>
+
+<p>The StrataMar approach attempts to bridge this gap.</p>
+
+<p>Instead of focusing only on prediction or only on optimization, the project investigates <strong>decision architectures</strong> that combine:</p>
+
+<ul>
+  <li>sequential decision modeling</li>
+  <li>reinforcement learning</li>
+  <li>uncertainty-aware reasoning</li>
+  <li>constrained optimization</li>
+  <li>simulation-based validation</li>
+</ul>
+
+<p>The goal is not simply to train agents that perform well in benchmark environments, but to explore the design of <strong>robust decision-support systems capable of operating in uncertain real-world conditions</strong>.</p>
+
+<hr />
+
+<h2 id="architectural-perspective">Architectural Perspective</h2>
+
+<p>A distinguishing feature of the StrataMar project is its architectural perspective.</p>
+
+<p>Rather than designing a single intelligent agent, the system is conceptualized as a <strong>hierarchical decision architecture</strong>.</p>
+
+<p>Different layers of the system operate at different time scales and levels of abstraction:</p>
+
+<ul>
+  <li>strategic planning layers</li>
+  <li>operational decision agents</li>
+  <li>monitoring and simulation layers</li>
+</ul>
+
+<p>This structure reflects the way complex technical systems are typically managed and enables coordination between multiple decision processes.</p>
+
+<hr />
+
+<h2 id="relation-to-ongoing-research">Relation to Ongoing Research</h2>
+
+<p>The StrataMar initiative is closely connected to my ongoing research on reinforcement learning and decision-making under uncertainty.</p>
+
+<p>The broader objective of this work is to explore how ideas from reinforcement learning, probabilistic reasoning, and decision theory can be transformed into practical engineering tools.</p>
+
+<p>In this sense StrataMar serves both as:</p>
+
+<ul>
+  <li>a research platform for experimentation</li>
+  <li>a prototype architecture for future decision-support systems</li>
+</ul>
+
+<hr />
+
+<h2 id="looking-ahead">Looking Ahead</h2>
+
+<p>The project is currently in its early stages.</p>
+
+<p>The immediate focus is on the development of the simulation environment and the core architecture of the platform.</p>
+
+<p>Future work will include:</p>
+
+<ul>
+  <li>experimental studies of reinforcement learning algorithms</li>
+  <li>investigation of uncertainty modeling techniques</li>
+  <li>development of hierarchical and multi-agent decision architectures</li>
+  <li>exploration of real-world application scenarios</li>
+</ul>
+
+<p>The long-term objective is to better understand how adaptive decision systems can operate in complex environments characterized by uncertainty, constraints, and evolving system dynamics.</p>
+
+<hr />
+
+<p><em>This article marks the beginning of the StrataMar research initiative.</em></p>]]></content><author><name>LogMaks</name></author><summary type="html"><![CDATA[Reinforcement Learning for Decision-Making in Complex Systems]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://logmaks.github.io/assets/stratamar.png" /><media:content medium="image" url="https://logmaks.github.io/assets/stratamar.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)</title><link href="https://logmaks.github.io/posts/hier-mro/" rel="alternate" type="text/html" title="Final vision of hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)" /><published>2026-02-15T00:00:00+00:00</published><updated>2026-02-15T00:00:00+00:00</updated><id>https://logmaks.github.io/posts/hier-mro</id><content type="html" xml:base="https://logmaks.github.io/posts/hier-mro/"><![CDATA[<h2 id="abstract">Abstract</h2>
 
 <p>This paper considers a hierarchical multi-agent reinforcement learning approach for optimizing technical maintenance and repair under uncertainty. A model is proposed that integrates strategic planning and tactical coordination with a safe learning mechanism.</p>
 
