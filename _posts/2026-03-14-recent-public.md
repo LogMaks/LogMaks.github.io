@@ -8,11 +8,11 @@ On a recently accepted paper, a proof-of-concept implementation, and the broader
 
 Recently the thoughts of Marvin had to step aside for a while: most of my time was devoted to working on research papers that will eventually form part of my PhD dissertation. Fortunately, the effort was worthwhile — the papers have been accepted after peer review. This makes it a good moment to briefly summarize the core ideas behind the research project and the direction in which it is evolving.
 
-The main article can be found here:
-https://www.elibrary.ru/item.asp?id=89021776
+The main article can be found here (Russian):
+<https://www.elibrary.ru/item.asp?id=89021776>
 
 A proof-of-concept implementation is also available:
-https://www.elibrary.ru/item.asp?id=88851718
+<https://www.elibrary.ru/item.asp?id=88851718>
 
 If anyone is interested in reading the full versions, feel free to contact me.
 Below is a short overview of the conceptual motivation behind the project.
