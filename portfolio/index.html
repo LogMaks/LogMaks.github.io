@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Portfolio | Maksim Loginov</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Portfolio" />
+<meta name="author" content="Maksim Loginov" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI / ML researcher and developer — reinforcement learning, multi-agent systems, industrial decision support" />
+<meta name="twitter:description" property="og:description" content="AI / ML researcher and developer — reinforcement learning, multi-agent systems, industrial decision support" />
+<link rel="canonical" href="https://logmaks.github.io/portfolio/" />
+<meta property="og:url" content="https://logmaks.github.io/portfolio/" />
+<meta property="og:site_name" content="Maksim Loginov" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Portfolio" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Maksim Loginov","url":"/about/"},"description":"AI / ML researcher and developer — reinforcement learning, multi-agent systems, industrial decision support","headline":"Portfolio","url":"https://logmaks.github.io/portfolio/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
+
+    
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">Maksim Loginov</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/research/">Research</a>
+      <a href="/posts/">Posts</a>
+      <a href="/about/">About</a>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main class="site-main container">
+      <h1>Portfolio</h1>
+<p class="lead muted">
+  Applied research prototypes and engineering work. Items are experimental or under active development unless a publication or demo link is listed.
+</p>
+
+<article class="portfolio-card portfolio-anchor" id="dst-diagnostics">
+  <h2>Dempster–Shafer Theory for Industrial Diagnostics</h2>
+  <p class="portfolio-role"><strong>Role:</strong> Research prototype / published research support</p>
+  <p class="keywords">Dempster–Shafer Theory · Belief Functions · Uncertainty Modeling · Industrial Diagnostics · Continuous Casting (CCM)</p>
+
+  <dl class="detail-list">
+    <dt>Context</dt>
+    <dd>Industrial diagnostics under uncertainty, incomplete observations, and conflicting evidence — focused on continuous casting machines in metallurgy.</dd>
+    <dt>Problem</dt>
+    <dd>Classical probabilistic models may be brittle when evidence is sparse, imprecise, or conflicting across temperature, vibration, and acoustic sensors.</dd>
+    <dt>Approach</dt>
+    <dd>Use Dempster–Shafer belief functions to represent uncertainty and combine evidence from diagnostic sources; adaptive combination rules (Dempster / Yager) depending on conflict coefficient.</dd>
+    <dt>Evidence</dt>
+    <dd>
+      <ul class="evidence-list">
+        
+        <li>Peer-reviewed article: <a href="https://vestnikvivt.ru/ru/journal/pdf?id=1410" target="_blank" rel="noopener">VIVT Journal (PDF)</a></li>
+        
+        
+        <li>Demo: <a href="https://damshaf.onrender.com/" target="_blank" rel="noopener">damshaf.onrender.com</a></li>
+        
+        
+        <li>Project page: <a href="/projects/dsp-project-copy/">Dempster–Shafer diagnostics overview</a></li>
+        
+        <li>Repository: not publicly linked yet</li>
+      </ul>
+    </dd>
+    <dt>Outcome</dt>
+    <dd>Experimental validation on CCM diagnostic scenarios reported in the published work: improved diagnostic accuracy and reduced false confidence under high-conflict evidence (see project page for details).</dd>
+    <dt>Status</dt>
+    <dd>Published research support with working diagnostic prototype demo.</dd>
+  </dl>
+</article>
+
+<article class="portfolio-card" id="mro-marl">
+  <h2>Industrial MRO Optimization with Hierarchical MARL</h2>
+  <p class="portfolio-role"><strong>Role:</strong> Simulation-based research prototype</p>
+  <p class="keywords">Reinforcement Learning · MARL · HRL · CMDP · HITL · Industrial Maintenance · Simulation</p>
+
+  <dl class="detail-list">
+    <dt>Context</dt>
+    <dd>Industrial maintenance planning under limited maintenance resources and equipment degradation.</dd>
+    <dt>Problem</dt>
+    <dd>Reactive or fixed-schedule maintenance policies may lead to avoidable downtime or inefficient resource use under stochastic failures and partial observability.</dd>
+    <dt>Approach</dt>
+    <dd>Simulation-based decision-support prototype using hierarchical RL / MARL, HITL operator feedback, constrained decision-making (CMDP / action masking), and latency-aware intervention logic at the strategic level.</dd>
+    <dt>Evidence</dt>
+    <dd>
+      <ul class="evidence-list">
+        <li>Project page: <a href="/projects/hrl-maint/">PhD research track overview</a></li>
+        <li>Working paper draft: <a href="/posts/hier-mro/">Hierarchical MARL framework for MRO</a></li>
+        <li>Repository: not publicly linked yet</li>
+        <li>Demo / screenshots: to be added</li>
+      </ul>
+    </dd>
+    <dt>Outcome</dt>
+    <dd>Simulation experiments compare learned maintenance policies against baseline strategies such as reactive or schedule-based maintenance. Reported trends include a shift toward more preventive planning under resource limits (see working paper draft; no production deployment).</dd>
+    <dt>Status</dt>
+    <dd>Active research prototype — under development.</dd>
+  </dl>
+</article>
+
+<article class="portfolio-card" id="rl-envs">
+  <h2>RL Simulation Environments</h2>
+  <p class="portfolio-role"><strong>Role:</strong> Experimental environment</p>
+  <p class="keywords">Python · Gymnasium · PyGame · Simulation · RL Environments · Experiment Logging</p>
+
+  <dl class="detail-list">
+    <dt>Context</dt>
+    <dd>Reproducible testbeds for hierarchical and multi-agent RL beyond toy benchmarks.</dd>
+    <dt>Problem</dt>
+    <dd>Maintenance and resource-allocation experiments need configurable simulation environments with logging hooks.</dd>
+    <dt>Approach</dt>
+    <dd>Custom Gymnasium-style environments modeling equipment fleet dynamics, maintenance actions, and resource constraints.</dd>
+    <dt>Evidence</dt>
+    <dd>
+      <ul class="evidence-list">
+        <li>Repository: not publicly linked yet</li>
+      </ul>
+    </dd>
+    <dt>Status</dt>
+    <dd>Experimental environment — iterative development.</dd>
+  </dl>
+</article>
+
+<article class="portfolio-card" id="mlops-sandbox">
+  <h2>Data / ML Engineering Sandbox</h2>
+  <p class="portfolio-role"><strong>Role:</strong> Engineering sandbox (under development)</p>
+  <p class="keywords">Python · SQL · FastAPI · Docker · Experiment Tracking</p>
+
+  <dl class="detail-list">
+    <dt>Context</dt>
+    <dd>Small research-oriented prototypes: data-processing scripts, API experiments, and reproducible experiment pipelines.</dd>
+    <dt>Problem</dt>
+    <dd>Bridging research experiments with lightweight data workflows and serving stubs.</dd>
+    <dt>Approach</dt>
+    <dd>Python / SQL-based data and ML prototypes; containerized API experiments; tracked experiment runs.</dd>
+    <dt>Evidence</dt>
+    <dd>
+      <ul class="evidence-list">
+        <li>Repository: not publicly linked yet</li>
+      </ul>
+    </dd>
+    <dt>Status</dt>
+    <dd>Under development — no public artifact yet.</dd>
+  </dl>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2026 Maksim Loginov ·
+      <a href="/research/">Research</a> ·
+      <a href="/portfolio/">Portfolio</a> ·
+      <a href="/lab-notes/">Lab Notes</a> ·
+      <a href="/contact/">Contact</a>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
