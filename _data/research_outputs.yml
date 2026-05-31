@@ -1,0 +1,63 @@
+peer_reviewed:
+  - title: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of Continuous Casting Machines"
+    status: Published
+    venue: VIVT Journal
+    year: TBD
+    links:
+      - label: PDF
+        url: "https://vestnikvivt.ru/ru/journal/pdf?id=1410"
+      - label: Demo
+        url: "https://damshaf.onrender.com/"
+    project_match: "Dempster"
+
+accepted:
+  - title: "Hierarchical decision-making under uncertainty — main research article (Russian)"
+    status: Accepted
+    venue: TBD
+    year: TBD
+    links:
+      - label: eLibrary
+        url: "https://www.elibrary.ru/item.asp?id=89021776"
+  - title: "Proof-of-concept implementation — related publication (Russian)"
+    status: Accepted
+    venue: TBD
+    year: TBD
+    links:
+      - label: eLibrary
+        url: "https://www.elibrary.ru/item.asp?id=88851718"
+
+manuscripts:
+  - title: "Hierarchical multi-agent reinforcement learning framework for maintenance and repair (MRO)"
+    status: Working paper
+    venue: TBD
+    year: TBD
+    post_match: "Final vision"
+  - title: "Marginal Hierarchical Reinforcement Learning for Asymmetric Multi-Agent Systems"
+    status: Concept note
+    venue: TBD
+    year: "2025"
+    post_match: "Marginal Hierarchical"
+
+research_directions:
+  - id: track-a1
+    title: "Hierarchical MARL for Industrial Maintenance"
+    focus: "Hierarchical decision-making, SMDP options, tactical MARL, maintenance scheduling, constrained policies."
+    project_match: "Industrial MRO"
+  - id: track-a2
+    title: "Human-in-the-Loop Reinforcement Learning"
+    focus: "Interval HITL operator, latency-aware decision loops, operator uncertainty, fallback logic, safety constraints."
+    project_match: "Industrial MRO"
+  - id: track-a3
+    title: "Evidential Decision Processes (DST-MDP)"
+    focus: "Dempster–Shafer theory, belief/plausibility functions, DST-MDP, robust decision-making under incomplete information."
+    project_match: "Epistemic Uncertainty"
+  - id: track-b1
+    title: "Resource-Aware / Marginal HRL"
+    focus: "Allocation of computational or operational resources between agents, leadership migration, marginal utility of control."
+    post_match: "Marginal Hierarchical"
+
+collaborations:
+  - title: "Participation in CayleyPy Project"
+    status: Suspended
+    note: "Open-source Python framework for Cayley graphs and large algebraic structures; participation paused to focus on RL research."
+    project_match: "CayleyPy"

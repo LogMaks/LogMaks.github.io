@@ -1,7 +1,18 @@
 ---
-title: "Dempster–Shafer Theory for Condition Diagnosis(Publication)"
+title: "Dempster–Shafer Theory for Condition Diagnosis of Continuous Casting Machines"
 image: "/assets/dsp1.png"
-excerpt: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of a Continuous Casting Machines."
+excerpt: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of Continuous Casting Machines."
+status: published
+venue: VIVT Journal
+year: TBD
+audience:
+  - research
+  - industry
+  - engineering
+links:
+  demo: "https://damshaf.onrender.com/"
+  pdf: "https://vestnikvivt.ru/ru/journal/pdf?id=1410"
+  article: "https://vestnikvivt.ru/ru/journal/pdf?id=1410"
 ---
 * URL pdf (RUS) [VIVT Journal](https://vestnikvivt.ru/ru/journal/pdf?id=1410).
 * URL to test model [@Render](https://damshaf.onrender.com/).

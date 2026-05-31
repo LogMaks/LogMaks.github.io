@@ -3,6 +3,17 @@ title: "Participation in CayleyPy Project"
 image: "/assets/cayley.png"
 excerpt: "Currently suspended due my own projects. AI-based library to work with extremely large graphs."
 Supporting: "Cayley graphs, Schreier coset graphs, more to be added."
+status: prototype
+venue:
+year:
+audience:
+  - research
+  - engineering
+links:
+  repo:
+  demo:
+  pdf:
+  article:
 ---
 * Wiki Link [Cayley graph](https://en.wikipedia.org/wiki/Cayley_graph).
 

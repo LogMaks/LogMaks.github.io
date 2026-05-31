@@ -1,6 +1,11 @@
 ---
 layout: default
+title: Posts
+permalink: /posts/
 ---
+
+<h1>Posts</h1>
+<p class="lead muted">Articles, research notes, and technical write-ups.</p>
 
 <div class="posts-grid">
   {% assign posts_list = site.posts | sort: 'date' | reverse %}
@@ -21,4 +26,3 @@ layout: default
     </article>
   {% endfor %}
 </div>
-

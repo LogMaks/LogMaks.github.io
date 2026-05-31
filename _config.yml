@@ -1,5 +1,5 @@
-title: "LogMaks — RL & MAS Research"
-description: "Focus on Marginal Hierarchical RL and asymmetric multi-agent systems"
+title: "Maksim Loginov"
+description: "AI / ML researcher and developer — reinforcement learning, multi-agent systems, industrial decision support"
 url: "https://logmaks.github.io"
 baseurl: ""
 
@@ -19,8 +19,8 @@ timezone: UTC
 lang: en
 
 author:
-  name: "LogMaks"
-  email: ""
+  name: "Maksim Loginov"
+  email: "lomaxart@gmail.com"
   url: "/about/"
 
 collections:
@@ -29,6 +29,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:title/
+  lab_notes:
+    output: true
+    permalink: /lab-notes/:title/
 
 defaults:
   - scope:
@@ -36,14 +39,21 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: "LogMaks"
+      author: "Maksim Loginov"
       image: ""
   - scope:
       path: ""
       type: "projects"
     values:
       layout: post
-      author: "LogMaks"
+      author: "Maksim Loginov"
+      image: ""
+  - scope:
+      path: ""
+      type: "lab_notes"
+    values:
+      layout: post
+      author: "Maksim Loginov"
       image: ""
 
 sass:

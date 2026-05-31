@@ -4,7 +4,15 @@ title: Projects
 permalink: /projects/
 ---
 
-<h1>Projects/Publications</h1>
+<div class="notice">
+  Legacy index preserved for existing URLs. For structured publications and research tracks, see
+  <a href="{{ '/research/' | relative_url }}">Research</a>.
+  For applied prototypes, see <a href="{{ '/portfolio/' | relative_url }}">Portfolio</a>.
+</div>
+
+<h1>Projects</h1>
+<p class="muted">Research project pages — see status on each entry or on the <a href="{{ '/research/' | relative_url }}">Research</a> page.</p>
+
 <div class="posts-grid">
   {% assign projects_list = site.projects | sort: 'date' | reverse %}
   {% for project in projects_list %}
@@ -18,10 +26,9 @@ permalink: /projects/
       </a>
       <div class="post-content">
         <h2 class="post-title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-        {% if project.date %}<p class="post-meta">{{ project.date | date: "%d %B %Y" }}</p>{% endif %}
+        {% if project.status %}<p class="post-meta"><span class="status-badge">{{ project.status | replace: '_', ' ' }}</span></p>{% endif %}
         <p class="post-excerpt">{{ project.excerpt | strip_html | truncate: 140 }}</p>
       </div>
     </article>
   {% endfor %}
 </div>
-
