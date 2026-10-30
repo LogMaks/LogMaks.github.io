@@ -1,6 +1,6 @@
 ---
 title: "Participation in CayleyPy Project"
-image: "/assets/cayley.png"
+image: "/assets/cayley.jpg"
 excerpt: "Currently suspended due my own projects. AI-based library to work with extremely large graphs."
 Supporting: "Cayley graphs, Schreier coset graphs, more to be added."
 status: prototype

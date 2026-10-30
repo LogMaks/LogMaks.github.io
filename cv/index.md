@@ -90,7 +90,7 @@ permalink: /cv/
   <li><a href="https://github.com/LogMaks" target="_blank" rel="noopener">GitHub — LogMaks</a></li>
   <li><a href="https://www.linkedin.com/in/lomaxart/" target="_blank" rel="noopener">LinkedIn</a></li>
   <li><a href="https://scholar.google.com/citations?user=YDrAHzgAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-  <li><a href="https://orcid.org/my-orcid?orcid=0009-0005-7256-5718" target="_blank" rel="noopener">ORCID</a></li>
+  <li><a href="https://orcid.org/0009-0005-7256-5718" target="_blank" rel="noopener">ORCID</a></li>
   <li><a href="mailto:lomaxart@gmail.com">lomaxart@gmail.com</a></li>
 </ul>
 

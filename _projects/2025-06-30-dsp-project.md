@@ -2,6 +2,7 @@
 title: "Dempster–Shafer Theory for Condition Diagnosis of Continuous Casting Machines"
 image: "/assets/dsp1.png"
 excerpt: "Utilizing the Dempster–Shafer Theory for Condition Diagnosis of Continuous Casting Machines."
+permalink: /projects/dsp-project/
 status: published
 venue: VIVT Journal
 year: TBD

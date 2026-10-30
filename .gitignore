@@ -1,7 +1,13 @@
 _site/
+dist/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 .bundle/
 vendor/
 *.gem
+.DS_Store
+**/.DS_Store
+desktop.ini
+Thumbs.db
+Gemfile.lock.bak

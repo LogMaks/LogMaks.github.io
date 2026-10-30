@@ -3,6 +3,9 @@ title: "Marginal HRL for Asymmetric Multi-Agent Systems"
 date: 2025-11-07
 excerpt: "Early concept note on treating computation as a scarce, allocatable resource in hierarchical MARL."
 status: concept note
+canonical_url: "https://logmaks.github.io/posts/marginal/"
+image: "/assets/marginal.jpg"
+sitemap: false
 ---
 
 ## Problem

@@ -1,16 +1,19 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
   {% if page.image %}
-  <img class="post-cover" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  <img class="post-cover" src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" loading="lazy" decoding="async" itemprop="image">
   {% endif %}
   <header>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%d %B %Y" }}</p>
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.date %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d %B %Y" }}</time>
+    </p>
+    {% endif %}
   </header>
-  <section class="post-body">
+  <section class="post-body" itemprop="articleBody">
     {{ content }}
   </section>
 </article>
-

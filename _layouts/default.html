@@ -1,42 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo %}
-    <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png">
+    <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
-    <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+    {% if page.math %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
-
-    {% if page.layout == "post" %}
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}], throwOnError: false});"></script>
+    {% endif %}
+    {% if page.url == '/' %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "{{ page.title | escape }}",
-      "author": {
-        "@type": "Person",
-        "name": "Maksim Loginov"
-      },
-      "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{{ page.date | date_to_xmlschema }}",
-      "url": "{{ page.url | absolute_url }}",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ page.url | absolute_url }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Maksim Loginov",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ '/assets/favicon.png' | absolute_url }}"
-        }
-      },
-      "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}"
+      "@type": "Person",
+      "name": "Maksim Loginov",
+      "url": "https://logmaks.github.io/",
+      "image": "{{ '/assets/avatar.jpg' | absolute_url }}",
+      "jobTitle": "ML Engineer / RL Researcher",
+      "email": "mailto:lomaxart@gmail.com",
+      "sameAs": [
+        "https://github.com/LogMaks",
+        "https://www.linkedin.com/in/lomaxart/",
+        "https://scholar.google.com/citations?user=YDrAHzgAAAAJ",
+        "https://orcid.org/0009-0005-7256-5718",
+        "https://t.me/lomaxart"
+      ],
+      "knowsAbout": [
+        "Reinforcement Learning",
+        "Multi-Agent Systems",
+        "Industrial Decision Support",
+        "Dempster–Shafer Theory",
+        "Simulation-Based Optimization"
+      ]
     }
     </script>
     {% endif %}

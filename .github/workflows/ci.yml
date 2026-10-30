@@ -2,6 +2,8 @@ name: build-deploy
 
 on:
   push:
+    branches:
+      - Default
 
 permissions:
   contents: write

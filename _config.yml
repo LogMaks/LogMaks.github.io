@@ -1,7 +1,10 @@
 title: "Maksim Loginov"
-description: "AI / ML researcher and developer — reinforcement learning, multi-agent systems, industrial decision support"
+tagline: "ML Engineer / RL Researcher"
+description: "Simulation-based prototypes for industrial maintenance, HITL decision loops, and uncertainty-aware diagnostics."
 url: "https://logmaks.github.io"
 baseurl: ""
+lang: en
+locale: en_US
 
 # GitHub Pages compatible plugins
 plugins:
@@ -16,12 +19,23 @@ kramdown:
 highlighter: rouge
 permalink: /posts/:title/
 timezone: UTC
-lang: en
 
 author:
   name: "Maksim Loginov"
   email: "lomaxart@gmail.com"
-  url: "/about/"
+  url: "https://logmaks.github.io/about/"
+
+# Used by jekyll-seo-tag for OG / Twitter cards
+logo: /assets/avatar.jpg
+
+social:
+  name: Maksim Loginov
+  links:
+    - https://github.com/LogMaks
+    - https://www.linkedin.com/in/lomaxart/
+    - https://scholar.google.com/citations?user=YDrAHzgAAAAJ
+    - https://orcid.org/0009-0005-7256-5718
+    - https://t.me/lomaxart
 
 collections:
   posts:
@@ -40,21 +54,33 @@ defaults:
     values:
       layout: post
       author: "Maksim Loginov"
-      image: ""
+      image: "/assets/avatar.jpg"
   - scope:
       path: ""
       type: "projects"
     values:
       layout: post
       author: "Maksim Loginov"
-      image: ""
+      image: "/assets/avatar.jpg"
   - scope:
       path: ""
       type: "lab_notes"
     values:
       layout: post
       author: "Maksim Loginov"
-      image: ""
+      image: "/assets/avatar.jpg"
+  - scope:
+      path: "google5060b7592b7460a9.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/cv_en.pdf"
+    values:
+      sitemap: false
+  - scope:
+      path: "desktop.ini"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
@@ -63,5 +89,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-google_site_verification: ""
+  - desktop.ini
+  - .DS_Store
+  - vendor
+  - node_modules

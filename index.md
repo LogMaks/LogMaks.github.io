@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Maksim Loginov — ML Engineer / RL Researcher
+title: ML Engineer / RL Researcher
 description: Simulation-based prototypes for industrial maintenance, HITL decision loops, and uncertainty-aware diagnostics.
+image: /assets/avatar.jpg
 permalink: /
 ---
 
@@ -96,7 +97,7 @@ permalink: /
       <p class="visitor-links">
         <a href="{{ '/research/' | relative_url }}">Research</a>
         · <a href="https://scholar.google.com/citations?user=YDrAHzgAAAAJ" target="_blank" rel="noopener">Scholar</a>
-        · <a href="https://orcid.org/my-orcid?orcid=0009-0005-7256-5718" target="_blank" rel="noopener">ORCID</a>
+        · <a href="https://orcid.org/0009-0005-7256-5718" target="_blank" rel="noopener">ORCID</a>
       </p>
     </div>
     <div class="visitor-card">

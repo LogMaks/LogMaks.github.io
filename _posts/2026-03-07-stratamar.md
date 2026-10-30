@@ -15,7 +15,7 @@ These observations gradually led to the idea of building a research and engineer
 This idea became the foundation of the **StrataMar project**.
 
 ---
-![StrataMar Architecture](/assets/stratamar_arch.png)
+![StrataMar Architecture](/assets/stratamar_arch.jpg)
 
 ## What is StrataMar
 
